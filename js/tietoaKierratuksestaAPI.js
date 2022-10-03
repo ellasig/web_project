@@ -9,4 +9,4 @@
 //Api'n käyttö:
 
 // hakuosoitteen vakio-osa.
-const apiurl = "https://api.tvmaze.com/search/shows?q="; //hakuavain eritetään ?
+//const apiurl = "https://api.tvmaze.com/search/shows?q="; //hakuavain eritetään ?

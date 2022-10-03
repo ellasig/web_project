@@ -11,7 +11,7 @@
 //luodaan array kuville
 const huoltoKuvat= [
     {filename: "kuvat/slideshow1.jpg",
-    caption: 'Farkut voi tuulettaa raikastamiseksi'},
+    alt: 'Kuva vaatteista'},
     {filename: "kuvat/slideshow2.jpg",
     caption: 'pieniä vikoja voi korjata ompelemalla'},
     {filename: "kuvat/slideshow3.jpg",

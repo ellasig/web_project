@@ -9,6 +9,9 @@ h2{
 nav{
     background-color: #F1DFD4;
 }
+#tietoa{
+    background-color: #F1DFD4;
+}
 
 #logoImg{
     /* VAIHDETAAN SOPIVA KOKO JA SIT KATOTAAN KANS SE ALK.PER KUVA ETTEI OO SIKANA LIIAN ISO KOKOON NÄHDEN*/
@@ -31,6 +34,9 @@ nav{
 }
 #sisalto{
     /* miten alkaa vasta navbarin jälkeen */
+}
+footer{
+    /* kuvat vierekkäin, teksti oikeelle*/
 }
 
 
