@@ -28,7 +28,7 @@ nav{
     width: 100%;
 }
 #sisalto{
-    /* miten alkaa vasta navbarin jälkeen */
+    margin-top: 10.5%;
 }
 a{
     margin: 5px;
@@ -40,7 +40,6 @@ a{
 #headerKuva{
     width: 100%;
     height: auto;
-    margin-top: 10.5%;
 }
 video{
     margin: 20px;
