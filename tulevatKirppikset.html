@@ -3,23 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Tulevat kirpputoritapahtumat</title>
+    <link rel="stylesheet" type="text/css" href="css/kirppis.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h2>TV-sarjojen haku</h2>
-</header>
-<div>
+<div class ="container">
+    <header id="header_nav">
+        <!-- Logon kuva -->
+        <figure>
+            <img src="kuvat/logoImg.jpg" id="logoImg">
+        </figure>
+        <!-- Navigointipalkki-->
+        <nav>
+            <a href="tietoaKierratuksesta.html">Tietoa kierrätyksestä</a>
+            <a href="vaatteidenhuoltaminen.html">Vaatteiden huoltaminen</a>
+            <a href="erilaisiakirpputoreja.html">Erilaisia Kirpputoreja</a>
+            <a href="#">Kartta</a>
+            <a href="tietoameista.html">Tietoa meistä</a>
+        </nav>
+    </header>
+<div id="sisalto">
     <section id="haku">
         <input id="hakuteksti"  type="text" name="haku" placeholder="Syötä tähän ">
         <button id="hakunappi">Hae</button>
     </section>
     <header>
-        <h3>Löytyneet hakutulokset:</h3>
+        <h2>Löytyneet hakutulokset:</h2>
     </header>
-</div>
-<main id="hakutulokset">
+    <main id="hakutulokset">
 
-</main>
+    </main>
+</div>
+</div>
 <script src="js/tulevatKirppikset.js"></script>
 </body>
 </html>
