@@ -1,3 +1,7 @@
+@media   {
+    
+}
+
 .container{
     /*asetetaan fontti kaikkeen sisältöön oletuksena*/
     font-family: 'Montserrat', sans-serif;
@@ -7,9 +11,9 @@ h2{
     font-family: 'Barlow Condensed', sans-serif;
 }
 nav{
+    width: 100%;
     background-color: #E6C6B2;
     padding: 10px;
-
 }
 
 #logoImg{
@@ -18,32 +22,36 @@ nav{
     left: 0px;
     margin: 0px;
 }
-#header_nav{
+header{
+    display: block;
     /* TEHDÄÄN SE MEDIA QUERRY ASIA ETTÄ MENEE SEN KOLMEN VIIVAN TAAKSE PIENES NÄYTÖS*/
     /*pysyy yläreunassa scrollatessa */
     background-color: #F1DFD4;
-    position: fixed;
     top: 0px;
+    position: fixed;
     /* leveys on koko näytön*/
     width: 100%;
 }
 #sisalto{
     margin-top: 10.5%;
+    overflow: auto;
 }
 a{
-    margin: 5px;
     color: black;
-    padding: 6px;
+    padding: 8px;
     border: solid;
     border-color: #D29874;
 }
 #headerKuva{
+    padding-top: 50%px;
     width: 100%;
-    height: auto;
+    margin-top: 1%;
+    white-space: normal;
 }
 video{
     margin: 20px;
-    width: 700px;
+    width: 50%;
+    position: relative;
 }
 #tietoa{
     /* Kohta jossa video */
@@ -52,12 +60,26 @@ video{
 
 }
 #huolto{
+    width: 90%;
     padding: 20px;
     /* Vaatteen huolto kohta */
+}
+#slideKuva{
+    width: 90%;
 }
 footer{
     /* kuvat vierekkäin, teksti oikeelle*/
     padding: 20px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+#container{
+    display: block;
+}
+#sisalto{
+    display: block;
 }
 
 
