@@ -1,6 +1,3 @@
-@media   {
-    
-}
 
 .container{
     /*asetetaan fontti kaikkeen sisältöön oletuksena*/
@@ -43,29 +40,35 @@ a{
     border-color: #D29874;
 }
 #headerKuva{
+    background-color: white;
     padding-top: 50%px;
     width: 100%;
     margin-top: 1%;
     white-space: normal;
 }
 video{
+    float: left;
     margin: 20px;
     width: 50%;
     position: relative;
 }
+ul{
+    float: left;
+}
 #tietoa{
     /* Kohta jossa video */
     padding: 20px;
+    padding-bottom: 400px;
     background-color: #F1DFD4;
-
 }
 #huolto{
-    width: 90%;
     padding: 20px;
+    background-color: #F1DFD4;
+    margin-top: 20px;
     /* Vaatteen huolto kohta */
 }
 #slideKuva{
-    width: 90%;
+    width: 100%;
 }
 footer{
     /* kuvat vierekkäin, teksti oikeelle*/
@@ -81,7 +84,14 @@ body{
 #sisalto{
     display: block;
 }
-
+#vaatteidenHuolto{
+    float: top;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#kierrattaminen{
+    background-color: #F1DFD4;
+}
 
 
 
