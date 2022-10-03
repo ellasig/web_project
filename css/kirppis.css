@@ -8,6 +8,7 @@ h2{
 }
 nav{
     background-color: #F1DFD4;
+    padding: 10px;
 }
 #tietoa{
     background-color: #F1DFD4;
@@ -37,6 +38,10 @@ nav{
 }
 footer{
     /* kuvat vierekkäin, teksti oikeelle*/
+}
+a{
+    padding: 5px;
+    border: solid;
 }
 
 
