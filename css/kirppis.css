@@ -1,0 +1,36 @@
+.container{
+    /*asetetaan fontti kaikkeen sisältöön oletuksena*/
+    font-family: 'Montserrat', sans-serif;
+}
+h2{
+    /* headerin fontti*/
+    font-family: 'Barlow Condensed', sans-serif;
+}
+nav{
+    background-color: #F1DFD4;
+}
+
+#logoImg{
+    /* VAIHDETAAN SOPIVA KOKO JA SIT KATOTAAN KANS SE ALK.PER KUVA ETTEI OO SIKANA LIIAN ISO KOKOON NÄHDEN*/
+    width: 50px;
+    left: 0px;
+    margin: 0px;
+}
+#headerKuva{
+    /* NYT KATKEE SIVULTA VÄHÄN, SÄÄDETÄÄNKÖ JOTENKIN VAI OLLAANKO ET IHAN SAMA :DD*/
+    width: 100%;
+    height: auto;
+}
+#header_nav{
+    /* TEHDÄÄN SE MEDIA QUERRY ASIA ETTÄ MENEE SEN KOLMEN VIIVAN TAAKSE PIENES NÄYTÖS*/
+    /*pysyy yläreunassa scrollatessa */
+    position: fixed;
+    top: 0px;
+    /* leveys on koko näytön*/
+    width: 100%;
+}
+#sisalto{
+    /* miten alkaa vasta navbarin jälkeen */
+}
+
+
