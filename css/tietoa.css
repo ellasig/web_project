@@ -92,10 +92,13 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     background-color: #68B0AB;
     padding: 10px;
     border-radius: 5px;
-
+}
+figcaption{
+    font-size: small;
 }
 .tietoaP{
-    padding: 20px;
+    padding: 10px;
+    margin: 5px 15px 15px 20px;
 }
 .tietoaKuvat{
     max-width: 100%;
