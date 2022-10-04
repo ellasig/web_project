@@ -89,7 +89,6 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
         display: flex;
         flex-wrap: wrap;
 }
-
 .tekijoidenKuvat{
     max-width: 70%;
     height: auto;
@@ -117,7 +116,7 @@ h2{
 }
 #rikki{
     padding: 20px;
-    padding-bottom: 10%;
+    padding-bottom: 20%;
     background-color: #F1DFD4;
     margin: 10px 0 10px 0;
 }
@@ -129,5 +128,9 @@ h2{
 }
 #pesuohjeet{
     width: 100%;
+    height: auto;
+}
+#kierrataGrafiikka{
+    max-width: 100%;
     height: auto;
 }
