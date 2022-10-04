@@ -123,11 +123,11 @@ h2{
 #rikkikuva{
     float: left;
     margin: 0 30px 10px 0;
-    width: 50%;
+    max-width: 100%;
     height: auto;
 }
 #pesuohjeet{
-    width: 50%;
+    max-width: 60%;
     height: auto;
 }
 .kierratyskuvat{
