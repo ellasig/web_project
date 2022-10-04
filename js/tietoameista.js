@@ -31,7 +31,7 @@ const sannaImg = document.getElementById('sannaKuva');
 //kun hiiri Ellan kuvan päällä tekstikenttään tulee teksti Ellasta
 ellaImg.addEventListener("mouseenter", function (){
     console.log('enter');
-    pElem.innerText = 'Olen Ella, niin ja näin vanha, mitä haluut kertoo itestäs :)';
+    pElem.innerText = 'Hei! Olen Ella, tulin muutaman työvuoden jälkeen takaisin koulun penkille. Löysin intoni koodaamiseen vasta vuosi sitten ja intoni opiskeluun on vain kasvanut.';
 });
 //kun hiiri lähtee kuvan päältä, tekstikenttä tyhjennetään kokonaan
 ellaImg.addEventListener('mouseleave',function (){
