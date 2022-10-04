@@ -1,4 +1,3 @@
-
 body{
     margin: 0;
 }
@@ -23,6 +22,7 @@ h2{
     overflow: hidden;
     height: 50px;
 }
+
 /*lisätään responsive classin navbarille korkeus*/
 .navbar.responsive{
     height: fit-content;
@@ -82,78 +82,44 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 }
 /*NAVBAR TYYLITTELY LOPPUU*/
 
-#sisalto{
+.sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
-    margin-top: 50px;
+    margin: 50px 15px 15px 15px ;
     overflow: auto;
-}
-#headerKuva{
-    background-color: white;
-    width: 100%;
-    white-space: normal;
-}
-video{
-    float: left;
-    margin: 20px;
-    width: 50%;
-    position: relative;
-    margin-right: 40px;
-}
-ul{
-    float: top;
-}
-#tietoa{
-    /* Kohta jossa video */
-    padding: 20px;
-    background-color: #F1DFD4;
-    padding-bottom: 20%;
-}
-#huolto{
-    padding: 20px;
-    background-color: #F1DFD4;
-    margin-top: 20px;
-    /* Vaatteen huolto kohta */
-}
-#slideKuva{
-    width: 100%;
-}
-
-#sisalto{
-    display: block;
-}
-#vaatteidenHuolto{
-    float: top;
     text-align: center;
-    padding-bottom: 20px;
 }
-#kierrattaminen{
-    background-color: #F1DFD4;
-    padding: 20px;
+#tietoaProjekti{
+    background-color: #68B0AB;
+    padding: 10px;
+    border-radius: 5px;
 }
-audio{
-    padding-top: 20px;
-    margin: 10px;
+figcaption{
+    font-size: small;
 }
-details{
-    float: top;
+.tietoaP{
+    padding: 10px;
+    margin: 5px 15px 15px 20px;
 }
-.tekijoidenKuvat{
-    margin-bottom: 20px;
-    margin-top: 30px;
+.tietoaKuvat{
+    max-width: 100%;
+    height: auto;
 }
+#tietoaKuvia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/*TÄSTÄ ALKAA FOOTTERIN TYYLITTELY*/
 .tekijoidenKuvat{
     max-width: 70%;
     height: auto;
 }
 footer{
+    width: 100%;
+    padding: 0;
+    margin: 10px 0px 0px 0px;
     background-color: #E6C6B2;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
-/*
-Lila: #725D68
-turkoosi: #68B0AB
-vaaleanpunainen: #F1DFD4*/
-

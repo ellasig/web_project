@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tietoa meistä</title>
-    <link rel="stylesheet" type="text/css" href="css/vaatteidenHuolto.css">
+    <link rel="stylesheet" type="text/css" href="css/tietoa.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -28,10 +28,63 @@
         </a>
     </nav>
     <!-- Sisälö alkaa -->
-<header>
-  <h1> Tietoa meistä </h1>
+    <div class="sisalto">
+        <article id="tietoaHenkilöt">
+                <header>
+                    <h3>Meistä henkilöinä</h3>
+                </header>
+                <p>Vie hiiri kuvan päälle ja pääset lukemaan meistä</p>
+            <section id="tietoaKuvia">
+                <figure>
+                    <img src="kuvat/tekijaElla.jpg" id="ellaKuva" class="tietoaKuvat" alt="kuvassa Ella Sigvart">
+                    <figcaption>Kuvassa Ella Sigvart</figcaption>
+                </figure>
+                <figure>
+                    <img src="kuvat/tekijaTuisku.jpg" id="tuiskuKuva" class="tietoaKuvat" alt="kuvassa Tuisku Närhi">
+                    <figcaption>Kuvassa Tuisku Närhi</figcaption>
+                </figure>
+                <figure>
+                    <img src="kuvat/tekijaSanna.jpg" id="sannaKuva" class="tietoaKuvat" alt="kuvassa Sanna Lohkovuori">
+                    <figcaption>Kuvassa Sanna Lohkovuori</figcaption>
+                </figure>
+            </section>
+            <p id="henkiloTietoa" class="tietoaP">
+                <!--tähän tulee tietoa ellasta, kun käyttäjä vie hiiren ellan kuvan päälle-->
+            </p>
+        </article>
 
-</header>
+        <article id="tietoaProjekti">
+            <Header>
+                <h2>Tietoa projektista</h2>
+            </Header>
+            <P class="tietoaP">Olemme kolme opiskelijaa Helsingistä ja päätimme kurssiprojektina luoda tämän sivun.<br>
+                Kierrättäminen ja ympäristö on meille kaikille tärkeää ja nautimme kaikki kirpputoreilla shoppailemisesta.
+                <br><br>Siitä lähtikin idea luoda sivusto, jolla olisi listattuna eri kirpputoreja ja pientä tietoisuutta kierrätyksestä.<br>
+                Tyylittely on tehty mahdollisimman raikkaaksi ja nuorekkaaksi sillä kohderymämme on juurikin meidän kaltaiset henkilöt; nuoret naiset jotak välittävät ympäristöstä!
+            </P>
+        </article>
+
+    </div>
+    <footer>
+        <figure>
+            <img class="tekijoidenKuvat" src="kuvat/tekijaElla.jpg" alt="Kuva sivun tekijästä: Ella Sigvart">
+            <figcaption>Ella Sigvart</figcaption>
+        </figure>
+        <figure>
+            <img class="tekijoidenKuvat"  src="kuvat/tekijaTuisku.jpg" alt="Kuva sivun tekijästä: Tuisku Närhi">
+            <figcaption>Tuisku Närhi</figcaption>
+        </figure>
+        <figure>
+            <img class="tekijoidenKuvat"src="kuvat/tekijaSanna.jpg" alt="Kuva sivun tekijästä: Sanna Lohkovuori">
+            <figcaption>Sanna Lohkovuori</figcaption>
+        </figure>
+        <ul>
+            <li>Tämä sivu on luotu kurssiprojektina</li>
+            <li>Olemme kaikki Metropolian opiskelijoita</li>
+            <li>Opiskelemme ensimmäistä vuotta tieto- ja viestintätekniikkaa</li>
+        </ul>
+    </footer>
+
 </div>
 
 <script src = "js/tietoameista.js"> </script>

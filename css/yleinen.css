@@ -1,4 +1,3 @@
-
 body{
     margin: 0;
 }
@@ -23,6 +22,7 @@ h2{
     overflow: hidden;
     height: 50px;
 }
+
 /*lisätään responsive classin navbarille korkeus*/
 .navbar.responsive{
     height: fit-content;
@@ -38,6 +38,8 @@ h2{
     text-decoration: none;
     font-size: 13px;
 }
+
+
 
 /* Vaihdetaan linkkien väri tummemmaksi kun hiiri tulee niiden päälle */
 .navbar a:hover {
@@ -82,64 +84,10 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 }
 /*NAVBAR TYYLITTELY LOPPUU*/
 
-#sisalto{
+.sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
     margin-top: 50px;
     overflow: auto;
-}
-#headerKuva{
-    background-color: white;
-    width: 100%;
-    white-space: normal;
-}
-video{
-    float: left;
-    margin: 20px;
-    width: 50%;
-    position: relative;
-    margin-right: 40px;
-}
-ul{
-    float: top;
-}
-#tietoa{
-    /* Kohta jossa video */
-    padding: 20px;
-    background-color: #F1DFD4;
-    padding-bottom: 20%;
-}
-#huolto{
-    padding: 20px;
-    background-color: #F1DFD4;
-    margin-top: 20px;
-    /* Vaatteen huolto kohta */
-}
-#slideKuva{
-    width: 100%;
-}
-
-#sisalto{
-    display: block;
-}
-#vaatteidenHuolto{
-    float: top;
-    text-align: center;
-    padding-bottom: 20px;
-}
-#kierrattaminen{
-    background-color: #F1DFD4;
-    padding: 20px;
-}
-audio{
-    padding-top: 20px;
-    margin: 10px;
-}
-details{
-    float: top;
-}
-.tekijoidenKuvat{
-    margin-bottom: 20px;
-    margin-top: 30px;
 }
 .tekijoidenKuvat{
     max-width: 70%;
@@ -151,9 +99,30 @@ footer{
     flex-direction: row;
     align-items: center;
 }
-
-/*
-Lila: #725D68
-turkoosi: #68B0AB
-vaaleanpunainen: #F1DFD4*/
-
+#kayttoIka{
+    background-color: #F1DFD4;
+    padding: 20px;
+    margin: 10px 0 10px 0;
+}
+#huolto{
+    background-color: #F1DFD4;
+    padding: 20px;
+    margin: 10px 0 10px 0;
+}
+h2{
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    background-color: #D29874;
+}
+#rikki{
+    padding: 20px;
+    padding-bottom: 20%;
+    background-color: #F1DFD4;
+    margin: 10px 0 10px 0;
+}
+#rikkikuva{
+    float: left;
+    margin: 0 30px 10px 0;
+}
+#rikkiOtsikko{
+}
