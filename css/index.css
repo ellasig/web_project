@@ -90,24 +90,19 @@ video{
     margin: 20px;
     width: 50%;
     position: relative;
-    margin-right: 40px;
 }
 ul{
-    padding: 10px;
+    float: left;
 }
 #tietoa{
     /* Kohta jossa video */
-    padding: 20px;
-    background-color: #F1DFD4;
-    float: left;
-    margin: 20px;
-    background-color: #F1DFD4;
+    padding: 20px 20px 400px;
+    /*background-color: #F1DFD4;*/
 }
 #huolto{
     padding: 20px;
-    margin-bottom: 20px;
     background-color: #F1DFD4;
-    width: 97.9%;
+    margin-top: 20px;
     /* Vaatteen huolto kohta */
 }
 #slideKuva{
@@ -118,6 +113,7 @@ footer{
     padding: 20px;
     background-color: #F1DFD4;
 }
+
 #sisalto{
     display: block;
 }
@@ -125,23 +121,14 @@ footer{
     float: top;
     text-align: center;
     padding-bottom: 20px;
-    margin-top: 30px;
 }
-#kierrattaminen{
+/*#kierrattaminen{
     background-color: #F1DFD4;
-    width: 100%;
-}
+
+}*/
 audio{
-    /* Äänitiedosto */
     padding-top: 20px;
     margin: 10px;
-}
-.kuvakasikirjoitus{
-    font-size: x-large;
-    color: black;
-}
-#horizontal{
-    color: black;
 }
 
 
