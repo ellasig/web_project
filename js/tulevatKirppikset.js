@@ -23,6 +23,8 @@ const apiurl = "https://open-api.myhelsinki.fi/v1/events/?tags_search=";
 
 // lopullinen hakukysely, joka lähetetään nettiin.
 let apiKysely;
+//cors ongelmaan apuja
+const proxy = 'https://api.allorigins.win/get?url=';
 
 // Etsitään HTML-sivulta tarvittavat komponentit id:n avulla.
 const hakunappi = document.getElementById("hakunappi");
@@ -39,6 +41,7 @@ function teeKysely() {
 
     // muodostetaan ja tulostetaan konsoliin lopullinen hakukysely
     apiKysely = apiurl + hakusana;
+
     console.log("Lähetettävä kysely: " + apiKysely);
 
     // kutsutaan fetch-jutut hoitavaa funktiota
@@ -49,14 +52,17 @@ function teeKysely() {
 function teeHaku(apiKysely)  {
 
     // suoritetaan hakukysely, fetch hoitaa mahdolliset tietoliikenneongelmat.
-    fetch(apiKysely).then(function(response) {
-        return response.json();
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(apiKysely)}`).then(response => {
+        if (response.ok) return response.json();
+        throw new Error('Network response was not ok.')
     }).then(function(json) {
-        vastaus(json);				// siirrytään varsinaisen datan käsittelyyn.
-    }).catch(function(error){           // Jos tapahtuu virhe,
-        console.log(error);             // kirjoitetaan virhe konsoliin.
-    });
+        vastaus(json);
+        console.log(json.contents);
+    })
 }
+
+
+
 
 // Funktio hoitaa kyselystä saadun json-datan käsittelyn.
 // Funktio saa parametrina json-muodossa olevan datan.
@@ -68,7 +74,7 @@ function vastaus(jsonData){
         let htmlKoodi = `
               <main> 
                      <article> 
-                            <header> ${jsonData[i].name} </header> 
+                            <header> ${jsonData[i].name.fi} </header> 
                         
                             <p> ${jsonData[i].description} </p>
                             <p>
