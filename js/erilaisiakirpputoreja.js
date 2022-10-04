@@ -3,21 +3,31 @@
 const picArray = [
 
     {
-        caption: 'Fida',
+        title: 'Fida',
+        caption: '',
         description: 'Fida on kotimainen hyväntekeväisyysmyymäläketju. Löydät heiltä vaatteita, huonekaluja ja harrastustarvikkeita. Voit myös lahjoittaa meille tavaraa. ',
         filename: 'kuvat/fida_logo.jpg'
 
     },
     {
-        caption: 'UFF',
+        title: 'UFF',
+        caption: '',
         description: 'UFF on yleishyödyllinen säätiö, joka ylläpitää vaatekeräyspalvelua Suomessa sekä tukee globaalikehitystyötä Afrikassa ja Aaasiassa. UFF:lta löytyy vaatteille lahjoituslaatikoita ympäri kaupunkeja sekä heidän toimipisteelle voi toimittaa ehjiä ja puhtaita vaatteita sekä tekstiilejä.',
         filename: 'kuvat/uff.jpg'
     },
 
     {
-        caption: 'Relove',
+        title: 'Relove',
+        caption: '',
         description: 'Relovessa laadukkaita second hand-aarteita sekä kahvilassa tarjoillaan aamiaista, lounasta ja käsintehtyjö leipomuksia viikon jokaisena päivänä',
         filename: 'kuvat/relove.jpg'
+    },
+
+    {
+        title: 'Kierrätyskeskus',
+        caption: '' ,
+        description: 'Kierrätyskeskuksella on pääkaupungiseudulla 12 kierrätysmyymälää sekä valtakunnallisesti toimiva verkkokauppa. Heille voi viedä ehjät ja tarpeettomat esineet, huonekalut sekä vaatteet. Kierrätyskeskusella on myös noutopalvelu isomille huonekaluille.',
+        filename: 'kuvat/kierratyskeskus1.jpeg'
     }
 
     ];
