@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Erilaisia kirpputoreja</title>
-    <link rel="stylesheet" type="text/css" href="css/kirppis.css">
+    <link rel="stylesheet" type="text/css" href="css/vaatteidenHuolto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
-
-    <header id="header_nav">
-        <!-- Logon kuva -->
-        <figure>
-            <img src="kuvat/logoImg.jpg" id="logoImg">
-        </figure>
-        <!-- Navigointipalkki-->
-        <nav>
-            <a href="tietoaKierratuksesta.html">Tietoa kierrätyksestä</a>
-            <a href="vaatteidenhuoltaminen.html">Vaatteiden huoltaminen</a>
-            <a href="erilaisiakirpputoreja.html">Erilaisia Kirpputoreja</a>
-            <a href="#">Kartta</a>
-            <a href="tietoameista.html">Tietoa meistä</a>
-            <a href="tulevatKirppikset.html">Tulevat kirpputoritapahtumat </a>
-        </nav>
-    </header>
-
+<!--Kaikki yhden divin sisään, jotta voidaan muokata teksti oletuksena samalle kaikissa elementeisse -->
+<div class ="container">
+    <!-- Navigointipalkki-->
+    <nav class="navbar" id="myNavbar">
+        <a href="index.html" class="active" > <img src="kuvat/logoImg.jpg" height="50" width="50" alt="logo"></a>
+        <a href="tietoaKierratuksesta.html">Tietoa kierrätyksestä</a>
+        <a href="vaatteidenhuoltaminen.html">Vaatteiden huoltaminen</a>
+        <a href="erilaisiakirpputoreja.html">Eri Kirpputoreja</a>
+        <a href="#">Kartta</a>
+        <a href="tietoameista.html">Tietoa meistä</a>
+        <a href="tulevatKirppikset.html">Tulevat kirpputorit </a>
+        <a href="javascript:void(0);" class="icon" onclick="navbarClass()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <!-- Sisälö alkaa -->
     <div id="sisalto">
     <section id = "erikirpparit">
 

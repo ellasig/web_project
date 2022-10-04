@@ -3,34 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Kirppis & kierrätys</title>
-    <link rel="stylesheet" type="text/css" href="css/kirppis.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 <!--Kaikki yhden divin sisään, jotta voidaan muokata teksti oletuksena samalle kaikissa elementeisse -->
     <div class ="container">
-        <header id="header_nav">
-            <!-- Logon kuva -->
-            <figure>
-                <img src="kuvat/logoImg.jpg" id="logoImg">
-            </figure>
-            <!-- Navigointipalkki-->
-            <nav>
+        <!-- Navigointipalkki-->
+            <nav class="navbar" id="myNavbar">
+                <a href="index.html" class="active" > <img src="kuvat/logoImg.jpg" height="50" width="50" alt="logo"></a>
                 <a href="tietoaKierratuksesta.html">Tietoa kierrätyksestä</a>
                 <a href="vaatteidenhuoltaminen.html">Vaatteiden huoltaminen</a>
-                <a href="erilaisiakirpputoreja.html">Erilaisia Kirpputoreja</a>
+                <a href="erilaisiakirpputoreja.html">Eri Kirpputoreja</a>
                 <a href="#">Kartta</a>
                 <a href="tietoameista.html">Tietoa meistä</a>
-                <a href="tulevatKirppikset.html">Tulevat kirpputoritapahtumat </a>
+                <a href="tulevatKirppikset.html">Tulevat kirpputorit </a>
+                <a href="javascript:void(0);" class="icon" onclick="navbarClass()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </nav>
-        </header>
-
     <!-- Sisälö alkaa -->
-
     <div id="sisalto">
         <!--leveä kuva headerin alla:-->
         <figure>
@@ -41,10 +38,6 @@
                 <source src="video/projektivideo.mp4" type="video/mp4">
                 Your browser does not support HTML video.
             </video>
-            <audio controls>
-                <source src="video/projektivideo_aaniraita.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
             <article id="kierrattaminen">
                 <h2>Mitä on kierrättäminen</h2>
                 <ul>
@@ -53,6 +46,24 @@
                     <li>Vaatteiden korjaaminen</li>
                 </ul>
             </article>
+            <details>
+                <summary>Videon esituotanto ja ääniraita</summary>
+                <h2>Videon kohderyhmä ja tarkoitus</h2>
+                <p>Videon tavoitteena on tuoda tietoisuutta vaatteiden kierrättämisestä ja ylläpitämisestä. <br>
+                    Pääkohderyhmänä toimii 20–30-vuotiaat naiset, jotka ovat kiinnostuneita ympäristöstä ja kierrätyksestä.
+                    Lisäksi katsojia kiinnostaa kestävyys eli miten vaatteiden elinikää voi pidentää eri keinoin.</p>
+                <h2>Synopsis</h2>
+                <p>video alkaa kysymyksellä: mitä on kierrätys.<br>
+                    Kuvataan kun henkilö ottaa kierrätetyt muovit kierrätyslaatikosta ja vie niitä kierrätykseen. Samalla hän kävelee vaaterekin ohi ja kamera pysähtyy rekkiin.
+                    <br> Siirrytään vaatteiden kuvaamiseen ja keskitytään enimmäkseen vaatteiden huoltoon ja niiden kierrättämiseen. Kuvataan kun henkilö siivoaa kierrätetyllä siivousliinalla.
+                    Kuvataan myös vaatteiden korjausta ja huoltoa nukkaharjalla. Samalla taustalla kerrotaan infoa kyseisistä aiheista.
+                    <br>Kuvataan myös vaatteiden pesua ja kerrotaan ohjeita siihen. Lopuksi henkilö kantaa vaatteen kierrätykseen.</p>
+                <audio controls>
+                    <source src="video/projektivideo_aaniraita.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio><br>
+                <a href="video/kuvakasikirjoitus.pdf">Kuvakäsikirjoitus</a>
+            </details>
         </section>
         <section id="huolto">
             <h2 id="vaatteidenHuolto">Miten huoltaa vaatteita</h2>

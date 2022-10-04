@@ -6,7 +6,14 @@
 
 'use strict';
 
-//Api'n käyttö:
+//Navbarista responsiivinen:
+//Vaihdellaan responsive classia navbariin kun käyttäjä painaa ikonia
+function navbarClass() {
+    let nav = document.getElementById("myNavbar");
+    if (nav.className === "navbar") {
+        nav.className += " responsive";
+    } else {
+        nav.className = "navbar";
+    }
+}
 
-// hakuosoitteen vakio-osa.
-//const apiurl = "https://api.tvmaze.com/search/shows?q="; //hakuavain eritetään ?

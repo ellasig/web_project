@@ -6,6 +6,17 @@
 
 'use strict'
 
+//Navbarista responsiivinen:
+//Vaihdellaan responsive classia navbariin kun käyttäjä painaa ikonia
+function navbarClass() {
+    let nav = document.getElementById("myNavbar");
+    if (nav.className === "navbar") {
+        nav.className += " responsive";
+    } else {
+        nav.className = "navbar";
+    }
+}
+
 //Käytetään APIa tälle sivulle.
 
 const apiurl = "https://open-api.myhelsinki.fi/v1/events/?tags_search=";
