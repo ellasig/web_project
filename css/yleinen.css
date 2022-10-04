@@ -1,6 +1,4 @@
-body{
-    margin: 0;
-}
+
 .container{
     /*asetetaan fontti kaikkeen sisältöön oletuksena*/
     font-family: 'Montserrat', sans-serif;
@@ -84,11 +82,12 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 }
 /*NAVBAR TYYLITTELY LOPPUU*/
 
-.sisalto{
-    /*margin top: se määrä mitä header vie yläreunasta*/
-    margin-top: 50px;
-    overflow: auto;
-
+.sisalto {
+        /*margin top: se määrä mitä header vie yläreunasta*/
+        margin-top: 50px;
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
 }
 .tekijoidenKuvat{
     max-width: 70%;
@@ -124,8 +123,21 @@ h2{
 #rikkikuva{
     float: left;
     margin: 0 30px 10px 0;
+    max-width: 100%;
+    height: auto;
 }
-#rikkiOtsikko{
+#pesuohjeet{
+    max-width: 60%;
+    height: auto;
+}
+.kierratyskuvat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.kierratyskuvia .kierratuskuvat{
+    max-width: 100%;
+    height: auto;
 }
 #kierrataGrafiikka{
     max-width: 100%;
