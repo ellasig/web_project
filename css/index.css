@@ -129,6 +129,11 @@ audio{
     margin: 10px;
 }
 
+mark {
+    background-color: #D29874;
+
+}
+
 .tekijoidenKuvat{
     max-width: 70%;
     height: auto;

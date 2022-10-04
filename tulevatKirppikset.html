@@ -28,37 +28,18 @@
         </a>
     </nav>
     <!-- Sisälö alkaa -->
-    <div id="sisalto">
-        <section id="haku">
-            <input id="hakuteksti"  type="text" name="haku" placeholder="Syötä tähän ">
-            <button id="hakunappi">Hae</button>
-        </section>
-        <header>
-            <h2>Löytyneet hakutulokset:</h2>
-        </header>
-        <main id="hakutulokset">
+<div id="sisalto">
+    <section id="haku">
+        <input id="hakuteksti" onkeyup="teeKysely()" type="text" name="haku" placeholder="Syötä tähän ">
+        <button id="hakunappi">Hae</button>
+    </section>
+    <header>
+        <h2>Löytyneet hakutulokset:</h2>
+    </header>
+    <main id="hakutulokset">
 
-        </main>
-    </div>
-    <footer>
-        <figure>
-            <img class="tekijoidenKuvat" src="kuvat/tekijaElla.jpg" alt="Kuva sivun tekijästä: Ella Sigvart">
-            <figcaption>Ella Sigvart</figcaption>
-        </figure>
-        <figure>
-            <img class="tekijoidenKuvat"  src="kuvat/tekijaTuisku.jpg" alt="Kuva sivun tekijästä: Tuisku Närhi">
-            <figcaption>Tuisku Närhi</figcaption>
-        </figure>
-        <figure>
-            <img class="tekijoidenKuvat"src="kuvat/tekijaSanna.jpg" alt="Kuva sivun tekijästä: Sanna Lohkovuori">
-            <figcaption>Sanna Lohkovuori</figcaption>
-        </figure>
-        <ul>
-            <li>Tämä sivu on luotu kurssiprojektina</li>
-            <li>Olemme kaikki Metropolian opiskelijoita</li>
-            <li>Opiskelemme ensimmäistä vuotta tieto- ja viestintätekniikkaa</li>
-        </ul>
-    </footer>
+    </main>
+</div>
 </div>
 <script src="js/tulevatKirppikset.js"></script>
 </body>
