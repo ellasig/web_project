@@ -100,13 +100,20 @@ footer{
 #kayttoIka{
     background-color: #F1DFD4;
     padding: 20px;
+    margin: 10px 0 10px 0;
 }
 #huolto{
     background-color: #F1DFD4;
     padding: 20px;
+    margin: 10px 0 10px 0;
 }
 h2{
     margin: 20px 0 20px 0;
     padding: 20px;
     background-color: #D29874;
+}
+#rikki{
+    padding: 20px;
+    background-color: #F1DFD4;
+    margin: 10px 0 10px 0;
 }
