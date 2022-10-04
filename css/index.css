@@ -140,7 +140,16 @@ details{
     margin-bottom: 20px;
     margin-top: 30px;
 }
-
+.tekijoidenKuvat{
+    max-width: 70%;
+    height: auto;
+}
+footer{
+    background-color: #E6C6B2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 /*
 Lila: #725D68
