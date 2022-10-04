@@ -116,6 +116,13 @@ h2{
 }
 #rikki{
     padding: 20px;
+    padding-bottom: 20%;
     background-color: #F1DFD4;
     margin: 10px 0 10px 0;
+}
+#rikkikuva{
+    float: left;
+    margin: 0 30px 10px 0;
+}
+#rikkiOtsikko{
 }
