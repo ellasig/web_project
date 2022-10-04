@@ -5,7 +5,7 @@ const picArray = [
     {
         title: 'Fida',
         caption: '',
-        description: 'Fida on kotimainen hyväntekeväisyysmyymäläketju. Löydät heiltä vaatteita, huonekaluja ja harrastustarvikkeita. Voit myös lahjoittaa meille tavaraa. ',
+        description: 'Fida on kotimainen hyväntekeväisyysmyymäläketju. Löydät heiltä vaatteita, huonekaluja ja harrastustarvikkeita. Otamme vastaan hyvänkuntoisia vaatteita, huonekaluja ja muuta kodin irtaimistoa. ',
         filename: 'kuvat/fida_logo.jpg'
 
     },
@@ -28,6 +28,13 @@ const picArray = [
         caption: '' ,
         description: 'Kierrätyskeskuksella on pääkaupungiseudulla 12 kierrätysmyymälää sekä valtakunnallisesti toimiva verkkokauppa. Heille voi viedä ehjät ja tarpeettomat esineet, huonekalut sekä vaatteet. Kierrätyskeskusella on myös noutopalvelu isomille huonekaluille.',
         filename: 'kuvat/kierratyskeskus1.jpeg'
+    },
+
+    {
+        title:'HELSINKI FLEA MARKET',
+        caption: '',
+        description: 'Helsinki flea market on uusi itsepalvelukirpputori joka sijaitsee Töölössä, Helsingin virkistysalueen sydämessä. Kaikki varattavissa olevat pöydät ovat rakennettu kierrätysmateriaaleista esimerkiksi teholaivoista ja melamiinilevyistä. Heiltä löytyy myös mobiilisovellus mistä voi seurata omia myyntejä ja luomaan hintalappuja suoraan kotisohvalta.',
+        filename: 'kuvat/fleamarket.jpg'
     }
 
     ];
