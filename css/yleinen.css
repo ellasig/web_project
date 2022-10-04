@@ -127,6 +127,15 @@ h2{
 }
 #rikkiOtsikko{
 }
+.kierratyskuvat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.kierratyskuvia .kierratuskuvat{
+    max-width: 100%;
+    height: auto;
+}
 #kierrataGrafiikka{
     max-width: 100%;
     height: auto;
