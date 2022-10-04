@@ -48,8 +48,8 @@
             </article>
             <details>
                 <summary>Videon esituotanto ja ääniraita</summary>
-                <h2>Videon kohderyhmä ja tarkoitus</h2>
-                <p>Videon tavoitteena on tuoda tietoisuutta vaatteiden kierrättämisestä ja ylläpitämisestä. <br>
+                <h2 class="kohderyhma">Videon kohderyhmä ja tarkoitus</h2>
+                <p class="videonTavoitteet">Videon tavoitteena on tuoda tietoisuutta vaatteiden kierrättämisestä ja ylläpitämisestä. <br>
                     Pääkohderyhmänä toimii 20–30-vuotiaat naiset, jotka ovat kiinnostuneita ympäristöstä ja kierrätyksestä.
                     Lisäksi katsojia kiinnostaa kestävyys eli miten vaatteiden elinikää voi pidentää eri keinoin.</p>
                 <h2>Synopsis</h2>
@@ -62,7 +62,7 @@
                     <source src="video/projektivideo_aaniraita.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio><br>
-                <a href="video/kuvakasikirjoitus.pdf">Kuvakäsikirjoitus</a>
+                <a class="kuvakasikirjoitus" href="video/kuvakasikirjoitus.pdf">Täältä löydät videon kuvakäsikirjoituksen.</a>
             </details>
         </section>
         <section id="huolto">
@@ -70,12 +70,17 @@
             <figure id="slideshow">
                 <img id="slideKuva" />
             </figure>
-            <p>tässä kerrotaan miten voidaan huoltaa vaatteita plaaplaaplaaa <br> välillä vaihetaan riviä</p>
+            <p>Vaatteita voi huoltaa pidentämällä pesuvälejä vaateharjan ja tuulettamisen avulla. Jos vaate ei ole tahrainen tai muuten likainen, vaatteen voi pesun sijaan tuulettaa.
+            Vaatetta ei tarvitse aina myöskään pestä kokonaan, vaan yksittäiset tahrat voi poistaa käsinpesussa. Liika peseminen kuluttaa sekä vaatetta, että ympäristöä.</p>
+            <p>Vaatteiden käyttöikää voi kasvattaa käyttämällä nukkaharjaa, joka poistaa helposti vaatteen pintaan kertyneen nukan.</p>
+            <p>Oikeaoppinen pesu lisää vaatteen käyttöikää. Tutustu siis huolellisesti vaatteen pesulappuun ja noudata ohjeita. Liian korkea lämpötila voi pilata vaatteen, joten
+            pesulämpötilan kanssa kannattaa olla tarkkana. Vaatteen voi aina kuitenkin pestä viileämmässä kuin pesulapussa mainittu lämpötila.</p>
             <p>Kerrotaan myös pesuohejita tässä samassa</p>
 
         </section>
     </div>
         <footer>
+            <h2 id="tekijatOtsikko">Tekijät</h2>
             <figure>
                 <img class="tekijoidenKuvat" src="kuvat/tekijaElla.jpg" alt="Kuva sivun tekijästä: Ella Sigvart">
                 <figcaption>Ella Sigvart</figcaption>
@@ -88,7 +93,7 @@
                 <img class="tekijoidenKuvat"src="kuvat/tekijaSanna.jpg" alt="Kuva sivun tekijästä: Sanna Lohkovuori">
                 <figcaption>Sanna Lohkovuori</figcaption>
             </figure>
-            <ul>
+            <ul id="footerinTeksti">
                 <li>Tämä sivu on luotu kurssiprojektina</li>
                 <li>Olemme kaikki Metropolian opiskelijoita</li>
                 <li>Opiskelemme ensimmäistä vuotta tieto- ja viestintätekniikkaa</li>
