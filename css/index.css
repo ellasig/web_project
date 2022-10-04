@@ -9,6 +9,8 @@ h2{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
+/* NAVBARIN TYYLITTELY ALKAA*/
+/*annetaan taustaväri ja yli menevä on piilossa. Korekus maksimissaan 50px*/
 /* Add a black background color to the top navigation */
 .navbar {
     position: fixed;
@@ -18,12 +20,12 @@ h2{
     overflow: hidden;
     height: 50px;
 }
-
+/*lisätään responsive classin navbarille korkeus*/
 .navbar.responsive{
     height: fit-content;
 }
 
-/* Style the links inside the navigation bar */
+/* Tyylitellään linkit navbarin sisällä */
 .navbar a {
     float: left;
     display: block;
@@ -34,24 +36,24 @@ h2{
     font-size: 13px;
 }
 
-/* Change the color of links on hover */
+/* Vaihdetaan linkkien väri tummemmaksi kun hiiri tulee niiden päälle */
 .navbar a:hover {
     background-color: #D29874;
     color: black;
 }
 
-/* Add an active class to highlight the current page */
+/* lisätään active classin omaavien tyylittelyä*/
 .navbar a.active {
     background-color: #68B0AB;
     color: black;
     padding: 0;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
+/* piilotetaan linkit pienillä näytöillä */
 .navbar .icon {
     display: none;
 }
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/*liian pienessä näytössä piilotetaan kaikki muut linkit paitsi logo/koti ja hampurilaisvalikko */
 @media screen and (max-width: 900px) {
     .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
@@ -60,7 +62,8 @@ h2{
     }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+/*responsive class lisätään elementille kun js suorittaa funktion käyttäjän painettua valikkoa.
+tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pienissä näytöissä*/
 @media screen and (max-width: 900px) {
     .navbar.responsive {position: relative;}
     .navbar.responsive a.icon {
@@ -108,11 +111,6 @@ ul{
 #slideKuva{
     width: 100%;
 }
-footer{
-    /* kuvat vierekkäin, teksti oikeelle*/
-    padding: 20px;
-    background-color: #F1DFD4;
-}
 
 #sisalto{
     display: block;
@@ -131,7 +129,16 @@ audio{
     margin: 10px;
 }
 
-
+.tekijoidenKuvat{
+    max-width: 70%;
+    height: auto;
+}
+footer{
+    background-color: #D29874;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 /*
 Lila: #725D68
