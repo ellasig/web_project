@@ -99,8 +99,7 @@ ul{
     /* Kohta jossa video */
     padding: 20px;
     background-color: #F1DFD4;
-    margin-bottom: 10%;
-
+    padding-bottom: 20%;
 }
 #huolto{
     padding: 20px;
@@ -113,8 +112,16 @@ ul{
 }
 footer{
     /* kuvat vierekkäin, teksti oikeelle*/
+    margin-top: 20px;
     padding: 20px;
     background-color: #F1DFD4;
+}
+#footerinTeksti{
+    margin: 20px;
+    margin-top: 50px;
+}
+#tekijatOtsikko{
+    margin-left: 5%;
 }
 
 #sisalto{
@@ -136,7 +143,10 @@ audio{
 details{
     float: top;
 }
-
+.tekijoidenKuvat{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
 
 
 /*
