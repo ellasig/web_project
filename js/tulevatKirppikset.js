@@ -43,38 +43,55 @@ function teeKysely() {
     apiKysely = apiurl + hakusana;
 
     console.log("Lähetettävä kysely: " + apiKysely);
+    let proxyKysely = proxy + encodeURIComponent(apiKysely);
 
     // kutsutaan fetch-jutut hoitavaa funktiota
-    teeHaku(apiKysely);        // parametrina hakulause
+    teeHaku(proxyKysely);        // parametrina hakulause
+
 }
 
-// Funktio saa parametrina hakulauseen.
+function teeHaku(proxyApiKysely)  {
+
+    // suoritetaan hakukysely, fetch hoitaa mahdolliset tietoliikenneongelmat.
+    fetch(proxyApiKysely).then(function(response) {
+        return response.json();
+    }).then(function(json) {
+        vastaus(json);				// siirrytään varsinaisen datan käsittelyyn.
+    }).catch(function(error){           // Jos tapahtuu virhe,
+        console.log(error);             // kirjoitetaan virhe konsoliin.
+    });
+}
+
+
+/* Funktio saa parametrina hakulauseen.
 function teeHaku(apiKysely)  {
 
     // suoritetaan hakukysely, fetch hoitaa mahdolliset tietoliikenneongelmat.
     fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(apiKysely)}`).then(response => {
         if (response.ok) return response.json();
         throw new Error('Network response was not ok.')
-    }).then(function(json) {
-        vastaus(json);
-        console.log(json.contents);
+    }).then(data => vastaus(data));
+        /*function(data) {
+        vastaus(data);
+        console.log(data.contents);
     })
-}
-
-
+}*/
 
 
 // Funktio hoitaa kyselystä saadun json-datan käsittelyn.
 // Funktio saa parametrina json-muodossa olevan datan.
 
-function vastaus(jsonData){
+function vastaus(jsonContents){
+    let jsonData = JSON.parse(jsonContents.contents);
+    console.log('debug koko' + jsonData.length)
+    console.log(jsonData)
     const hakutulokset = document.getElementById('hakutulokset');
     hakutulokset.innerHTML = '';
     for(let i =0 ; i < jsonData.length ; i++){
         let htmlKoodi = `
               <main> 
                      <article> 
-                            <header> ${jsonData[i].name.fi} </header> 
+                            <header> ${jsonData[i].name} </header> 
                         
                             <p> ${jsonData[i].description} </p>
                             <p>

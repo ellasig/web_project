@@ -39,8 +39,6 @@ h2{
     font-size: 13px;
 }
 
-
-
 /* Vaihdetaan linkkien väri tummemmaksi kun hiiri tulee niiden päälle */
 .navbar a:hover {
     background-color: #D29874;
@@ -84,75 +82,27 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 }
 /*NAVBAR TYYLITTELY LOPPUU*/
 
-.sisalto {
+.sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
-    margin-top: 50px;
+    margin: 50px 15px 15px 15px ;
     overflow: auto;
-    display: flex;
-    flex-wrap: wrap;
+    text-align: center;
+}
+figcaption{
+    font-size: small;
 }
 
-.kirppariArticlet h2 {
-    margin: 20px 0 20px 0;
-    padding: 20px;
-    background-color: #E6C6B2;
-}
-.kirppariArticlet{
-    background-color: #F1DFD4;
-    padding: 20px;
-    margin: 15px;
-    max-width: 30% ;
-    border-radius: 5px;
-}
-.kirppariArticlet img{
-    max-width: 100%;
+/*TÄSTÄ ALKAA FOOTTERIN TYYLITTELY*/
+.tekijoidenKuvat{
+    max-width: 70%;
     height: auto;
 }
-
-main {
-    background-color: #fff;
-    /*padding: 1rem;*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-article {
-    /* width: calc(100% / 3 - 2rem); */
-    /*width: 30%;
-    padding: 1rem;
-    box-sizing: border-box;*/
-}
-
-.kirppariArticlet header {
-    background-color: #fff;
-    margin: 5px;
-    color: #000;
-}
-
-.kirppariarticlet h2 {
-    margin: 0;
-    text-align: center;
-}
-
-figure {
-    margin: 0;
-    text-align: center;
-}
-
-footer img {
-    max-width: 50%;
-    height: auto;
-    margin-top: 10px;
-}
-
-figcaption {
-    text-align: center;
-}
-footer {
+footer{
+    width: 100%;
+    padding: 0;
+    margin: 10px 0px 0px 0px;
     background-color: #E6C6B2;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
-
