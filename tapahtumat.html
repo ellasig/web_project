@@ -20,9 +20,9 @@
         <a href="tietoaKierratuksesta.html">Tietoa kierrätyksestä</a>
         <a href="vaatteidenhuoltaminen.html">Vaatteiden huoltaminen</a>
         <a href="erilaisiakirpputoreja.html">Eri Kirpputoreja</a>
-        <a href="#">Kartta</a>
+        <a href="kartta.html">Kartta</a>
         <a href="tietoameista.html">Tietoa meistä</a>
-        <a href="tulevatKirppikset.html">Tulevat kirpputorit </a>
+        <a href="tapahtumat.html">Tulevat kirpputorit </a>
         <a href="javascript:void(0);" class="icon" onclick="navbarClass()">
             <i class="fa fa-bars"></i>
         </a>
@@ -30,7 +30,12 @@
     <!-- Sisälö alkaa -->
 <div class="sisalto">
     <section id="haku">
-        <input id="hakuteksti" type="text" name="haku" placeholder="Syötä tähän ">
+        <header>
+            <h1>Hae erilaisia tulevia tapahtumia</h1>
+        </header>
+        <p>Syötä allaolevaan hakukenttään erilaisia tapahtumiin liittyviä hakusanoja.<br>
+        Kokeile esim: flea markets, recycling, reuse, fairs and markets</p>
+        <input id="hakuteksti" type="text" name="haku" placeholder="Hae tapahtumia">
         <button id="hakunappi">Hae</button>
     </section>
     <header>
@@ -40,7 +45,26 @@
 
     </main>
 </div>
+    <footer>
+        <figure>
+            <img class="tekijoidenKuvat" src="kuvat/tekijaElla.jpg" alt="Kuva sivun tekijästä: Ella Sigvart">
+            <figcaption>Ella Sigvart</figcaption>
+        </figure>
+        <figure>
+            <img class="tekijoidenKuvat"  src="kuvat/tekijaTuisku.jpg" alt="Kuva sivun tekijästä: Tuisku Närhi">
+            <figcaption>Tuisku Närhi</figcaption>
+        </figure>
+        <figure>
+            <img class="tekijoidenKuvat"src="kuvat/tekijaSanna.jpg" alt="Kuva sivun tekijästä: Sanna Lohkovuori">
+            <figcaption>Sanna Lohkovuori</figcaption>
+        </figure>
+        <ul>
+            <li>Tämä sivu on luotu kurssiprojektina</li>
+            <li>Olemme kaikki Metropolian opiskelijoita</li>
+            <li>Opiskelemme ensimmäistä vuotta tieto- ja viestintätekniikkaa</li>
+        </ul>
+    </footer>
 </div>
-<script src="js/tulevatKirppikset.js"></script>
+<script src="js/tapahtumat.js"></script>
 </body>
 </html>

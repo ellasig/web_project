@@ -1,7 +1,7 @@
 /*
-* Kehittäjät: Tuisku Närhi, Ella Sigvart, Sanna Lohkovuori
-* Versio 1.1
-* 1.10.2022
+* Kehittäjät: Tuisku Närhi
+* Versio 1.2
+* 5.10.2022
 * */
 
 'use strict'
@@ -17,7 +17,7 @@ function navbarClass() {
     }
 }
 
-//Käytetään APIa tälle sivulle.
+//APIN KÄYTTÖÄ
 
 const apiurl = "https://open-api.myhelsinki.fi/v1/events/?tags_search=";
 
@@ -47,7 +47,6 @@ function teeKysely() {
 
     // kutsutaan fetch-jutut hoitavaa funktiota
     teeHaku(proxyKysely);        // parametrina hakulause
-
 }
 
 function teeHaku(proxyApiKysely)  {
@@ -62,44 +61,29 @@ function teeHaku(proxyApiKysely)  {
     });
 }
 
-
-/* Funktio saa parametrina hakulauseen.
-function teeHaku(apiKysely)  {
-
-    // suoritetaan hakukysely, fetch hoitaa mahdolliset tietoliikenneongelmat.
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(apiKysely)}`).then(response => {
-        if (response.ok) return response.json();
-        throw new Error('Network response was not ok.')
-    }).then(data => vastaus(data));
-        /*function(data) {
-        vastaus(data);
-        console.log(data.contents);
-    })
-}*/
-
-
 // Funktio hoitaa kyselystä saadun json-datan käsittelyn.
 // Funktio saa parametrina json-muodossa olevan datan.
 
 function vastaus(jsonContents){
     let jsonData = JSON.parse(jsonContents.contents);
-    console.log('debug koko' + jsonData.length)
+    console.log('debug koko' + jsonData.data.length)
     console.log(jsonData)
     const hakutulokset = document.getElementById('hakutulokset');
+    let htmlKoodi= ``;
     hakutulokset.innerHTML = '';
-    for(let i =0 ; i < jsonData.length ; i++){
-        let htmlKoodi = `
-              <main> 
+    for(let i =0 ; i < jsonData.data.length ; i++){
+        htmlKoodi += `             
                      <article> 
-                            <header> ${jsonData[i].name} </header> 
-                        
-                            <p> ${jsonData[i].description} </p>
-                            <p>
-                                <a href = "${jsonData[i]}.url" >Tapahtuman sivulle</a>
-                            </p>
-                     </article>
-              </main>
+                            <header>
+                                <h3>
+                                ${jsonData.data[i].name.fi} </header>      
+                                </h3>                
+                            <p> ${jsonData.data[i].description.body} </p>
+                            <link>
+                                <a href = "${jsonData.data[i].info_url}" >Tapahtuman sivulle</a>
+                            </link>
+                     </article>           
               `;
-        mainElem.innerHTML += htmlKoodi;
     }
+    mainElem.innerHTML = htmlKoodi;
 }

@@ -84,9 +84,42 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 
 .sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
-    margin: 50px 15px 15px 15px ;
+    margin-top: 50px;
     overflow: auto;
     text-align: center;
+
+}
+
+#haku{
+    margin: 10px;
+}
+#haku p{
+    font-size: 14px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+article{
+    margin: 20px 10px 10px 20px;
+    padding: 15px;
+    background-color: #F1DFD4;
+    border-radius: 5px;
+    max-width: 40%;
+    height: auto;
+}
+a{
+    color: black;
+    background-color: #E6C6B2;
+    padding: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+
+}
+a:hover{
+    background-color: #D29874;
 }
 figcaption{
     font-size: small;
