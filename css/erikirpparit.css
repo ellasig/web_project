@@ -1,4 +1,6 @@
-
+body{
+    margin: 0;
+}
 .container{
     /*asetetaan fontti kaikkeen sisältöön oletuksena*/
     font-family: 'Montserrat', sans-serif;
@@ -90,35 +92,44 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     flex-wrap: wrap;
 }
 
-h2 {
+.kirppariArticlet h2 {
     margin: 20px 0 20px 0;
     padding: 20px;
-    background-color: #D29874;
+    background-color: #E6C6B2;
 }
-
+.kirppariArticlet{
+    background-color: #F1DFD4;
+    padding: 20px;
+    margin: 15px;
+    max-width: 30% ;
+    border-radius: 5px;
+}
+.kirppariArticlet img{
+    max-width: 100%;
+    height: auto;
+}
 
 main {
     background-color: #fff;
-    padding: 1rem;
+    /*padding: 1rem;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
 article {
     /* width: calc(100% / 3 - 2rem); */
-    width: 30%;
+    /*width: 30%;
     padding: 1rem;
-    box-sizing: border-box;
+    box-sizing: border-box;*/
 }
 
-article header {
+.kirppariArticlet header {
     background-color: #fff;
-    padding: 0 0 1rem 0;
+    margin: 5px;
     color: #000;
 }
 
-article h2 {
+.kirppariarticlet h2 {
     margin: 0;
     text-align: center;
 }
@@ -128,8 +139,10 @@ figure {
     text-align: center;
 }
 
-figure img {
-    width: 30%;
+footer img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 10px;
 }
 
 figcaption {
