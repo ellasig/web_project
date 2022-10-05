@@ -1,4 +1,6 @@
-
+body{
+    margin: 0;
+}
 .container{
     /*asetetaan fontti kaikkeen sisältöön oletuksena*/
     font-family: 'Montserrat', sans-serif;
