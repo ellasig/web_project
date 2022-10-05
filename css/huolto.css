@@ -130,20 +130,23 @@ h2{
     max-width: 100%;
     height: auto;
 }
+
 #pesuohjeet{
     max-width: 80%;
     height: auto;
     display: flex;
-    align-items: center;
+    align-items: normal;
     /*float: left;*/
+
 }
-#vinkitPesuun{
+#vinkitPesuun {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: normal;
     /*float: left;*/
 }
+
 .kierratyskuvat{
     display: flex;
     flex-direction: row;
