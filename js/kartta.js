@@ -20,8 +20,12 @@ function navbarClass() {
 
 // kartta alkaa tästä
 
+<!-- haetaan käyttäjän paikkatiedot ja näytetään ne OpenStreetMapin ja Leaflet.js:n avulla -->
+<div id="map" style="width: 100%; height: 400px;"></div>
 
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.js"></script>
+<script>
 // Asetukset paikkatiedon hakua varten (valinnainen)
 const options = {
     enableHighAccuracy: true,
