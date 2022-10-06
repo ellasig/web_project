@@ -123,20 +123,34 @@ h2{
     background-color: #F1DFD4;
     margin: 10px 0 10px 0;
 }
+#rikki section{
+    display: flex;
+    flex-direction: row;
+}
+#rikkiTeksti{
+    max-width: 50%;
+    margin: 10px;
+}
 #rikkikuva{
-    float: left;
-    margin: 0 30px 10px 0;
     max-width: 100%;
     height: auto;
+}
+#pesu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px 5px 5px 15px;
 }
 
 #pesuohjeet{
     max-width: 80%;
     height: auto;
-    margin-top: 20px;
 }
 #vinkitPesuun {
-    padding: 20px;
+    max-width: 40%;
+}
+#vinkitPesuun li{
+    margin-top: 5px;
 }
 
 .kierratyskuvat{
@@ -153,5 +167,6 @@ h2{
     height: auto;
 }
 #pesuohjeCaption{
-    margin: 20px 0 20px 0;
+    margin: 10px 0 0 0;
+    font-size: small;
 }
