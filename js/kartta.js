@@ -55,7 +55,7 @@ const options = {
     maximumAge: 0,
 };
 
-// kustom ikonit: oma paikka punainen, latauspiste vihreä
+// kustom ikonit: oma paikka punainen, kirppari vihreä
 const punainenIkoni = L.divIcon({className: 'punainen-ikoni'});
 const vihreaIkoni = L.divIcon({className: 'vihrea-ikoni'});
 
@@ -74,24 +74,24 @@ function success(pos) {
     console.log(`More or less ${paikka.accuracy} meters.`);
     paivitaKartta(paikka);
     lisaaMarker(paikka, 'Olen tässä', punainenIkoni);
-    //haeKirpputorit(paikka);
+    haeKirpparit(paikka);
 }
 
 function paivitaKartta(crd) {
     // Käytetään leaflet.js -kirjastoa näyttämään sijainti kartalla (https://leafletjs.com/)
     map.setView([crd.latitude, crd.longitude], zoomlevel);
 }
-//TODO: muuta oikeet muuttujat
-function lisaaMarker(crd, teksti, ikoni, kirpputori) {
+function lisaaMarker(crd, teksti, ikoni,  osoite, kaupunkiOsa, info) {
     const marker = L.marker([crd.latitude, crd.longitude], {icon: ikoni}).
     bindPopup(teksti).
     on('popupopen', function(popup) {
-        console.log(jsonData.data);
-        nimi.innerHTML = jsonData.data.name.fi;
-        asemanOsoite.innerHTML = jsonData.data.location.address.street_address;
-        kaupunki.innerHTML = jsonData.data.location.address.locality + jsonData.data.location.address.neighbourhood;
-        lisatiedot.innerHTML = jsonData.data.info_url;
-        navigoi.href = `https://www.google.com/maps/dir/?api=1&origin=${paikka.latitude},${paikka.longitude}&destination=${crd.latitude},${crd.longitude}&travelmode=driving`;
+        console.log(kaupunkiOsa)
+        nimi.innerHTML = teksti;
+        asemanOsoite.innerHTML = osoite;
+        kaupunki.innerHTML = kaupunkiOsa;
+        lisatiedot.innerHTML = `${info}`;
+        //TODO: korjaa navigointi
+        //navigoi.href = `https://www.google.com/maps/dir/?api=1&origin=${paikka.latitude},${paikka.longitude}&destination=${crd.latitude},${crd.longitude}&travelmode=walking`;
     });
     markers.addLayer(marker);
 }
@@ -142,16 +142,20 @@ function vastaus(jsonContents){
     let jsonData = JSON.parse(jsonContents.contents);
     console.log('debug koko' + jsonData.data.length)
     for(let i =0 ; i < jsonData.data.length ; i++){
-        const teksti = jsonData.data[i].location.address.street_address;
+        const teksti = jsonData.data[i].name.fi;
+        const kirppisOsoite = jsonData.data[i].location.address.street_address;
+        const kirppisKaupunginOsa = jsonData.data[i].location.address.locality + `<br>` + jsonData.data[i].location.address.neighbourhood;
+        const kirppisInfo = jsonData.data[i].description.intro;
+
         console.log('debug teksti ' + teksti)
         const koordinaatit = {
             latitude: jsonData.data[i].location.lat,
             longitude: jsonData.data[i].location.lon,
-        };
+        }
         console.log(jsonData.data[i].location.lat);
         console.log('debug koordinaatit' + koordinaatit.longitude + koordinaatit.latitude);
 
-        lisaaMarker(koordinaatit, teksti, vihreaIkoni, jsonData.data[i].name.fi);
+        lisaaMarker(koordinaatit, teksti, vihreaIkoni, kirppisOsoite, kirppisKaupunginOsa, kirppisInfo);
     }
 }
 
