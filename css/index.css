@@ -92,12 +92,16 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     width: 100%;
     white-space: normal;
 }
+#myNavbar{
+    z-index: 3;
+}
 video{
     float: left;
     margin: 20px;
     width: 50%;
     position: relative;
     margin-right: 40px;
+    z-index: 1;
 }
 ul{
     float: top;

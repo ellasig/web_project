@@ -104,14 +104,13 @@ footer{
 #kayttoIka{
     background-color: #F1DFD4;
     padding: 20px;
-    margin: 10px 0 10px 0;
-    padding-bottom: 100px;
+    margin: 20px 0 20px 0;
+    padding-bottom: 30px;
 }
 #huolto{
     background-color: #F1DFD4;
     padding: 20px;
-    margin: 10px 0 10px 0;
-
+    margin: 20px 0 20px 0;
 }
 h2{
     margin: 20px 0 20px 0;
@@ -134,17 +133,10 @@ h2{
 #pesuohjeet{
     max-width: 80%;
     height: auto;
-    display: flex;
-    align-items: normal;
-    /*float: left;*/
-
+    margin-top: 20px;
 }
 #vinkitPesuun {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    /*float: left;*/
 }
 
 .kierratyskuvat{
@@ -161,5 +153,5 @@ h2{
     height: auto;
 }
 #pesuohjeCaption{
-
+    margin: 20px 0 20px 0;
 }
