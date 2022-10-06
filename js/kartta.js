@@ -74,7 +74,7 @@ function success(pos) {
     console.log(`More or less ${paikka.accuracy} meters.`);
     paivitaKartta(paikka);
     lisaaMarker(paikka, 'Olen tässä', punainenIkoni);
-    haeKirpparit(paikka);
+    haeOsoite(paikka);
 }
 
 function paivitaKartta(crd) {
@@ -90,8 +90,7 @@ function lisaaMarker(crd, teksti, ikoni,  osoite, kaupunkiOsa, info) {
         asemanOsoite.innerHTML = osoite;
         kaupunki.innerHTML = kaupunkiOsa;
         lisatiedot.innerHTML = `${info}`;
-        //TODO: korjaa navigointi
-        //navigoi.href = `https://www.google.com/maps/dir/?api=1&origin=${paikka.latitude},${paikka.longitude}&destination=${crd.latitude},${crd.longitude}&travelmode=walking`;
+        navigoi.href = `https://www.google.com/maps/dir/?api=1&origin=${paikka.latitude},${paikka.longitude}&destination=${crd.latitude},${crd.longitude}&travelmode=driving`;
     });
     markers.addLayer(marker);
 }
@@ -120,11 +119,15 @@ map.on('zoom', function() {
 
 // haetaan kirpputorit
 // API-dokumentaatio: https://open-api.myhelsinki.fi/doc#/v2places/listAll
-const proxy = 'https://api.allorigins.win/get?url=';
-const osoite = 'https://open-api.myhelsinki.fi/v2/places/?tags_search=Second%20hand';
-let proxyOsoite = proxy + encodeURIComponent(osoite);
 
-haeKirpparit(proxyOsoite)
+
+function haeOsoite(crd){
+    const proxy = 'https://api.allorigins.win/get?url=';
+    const osoite = `https://open-api.myhelsinki.fi/v2/places/?tags_search=Second%20hand&distance_filter=${crd.latitude}%2C${crd.longitude}%2C5`;
+    let proxyOsoite = proxy + encodeURIComponent(osoite);
+    haeKirpparit(proxyOsoite)
+}
+
 
 function haeKirpparit(kirpparit) {
 
