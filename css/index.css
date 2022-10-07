@@ -12,6 +12,9 @@ h1, h2, h3, h4{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
+#kierrattaminen h2{
+    margin: 0;
+}
 /* NAVBARIN TYYLITTELY ALKAA*/
 /*annetaan taustaväri ja yli menevä on piilossa. Korekus maksimissaan 50px*/
 .navbar {
@@ -108,9 +111,8 @@ ul{
 }
 #tietoa{
     /* Kohta jossa video */
-    padding: 20px;
     background-color: #F1DFD4;
-    padding-bottom: 20%;
+    padding: 20px 20px 20%;
     margin: 50px 40px 60px 40px;
 }
 #huolto{
