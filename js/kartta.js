@@ -123,6 +123,7 @@ map.on('zoom', function() {
 
 function haeOsoite(crd){
     const proxy = 'https://api.allorigins.win/get?url=';
+    //distance filter: 5km säteellä sijainnista
     const osoite = `https://open-api.myhelsinki.fi/v2/places/?tags_search=Second%20hand&distance_filter=${crd.latitude}%2C${crd.longitude}%2C5`;
     let proxyOsoite = proxy + encodeURIComponent(osoite);
     haeKirpparit(proxyOsoite)

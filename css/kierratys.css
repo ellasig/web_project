@@ -124,6 +124,10 @@ figcaption{
 .jateInfo p{
     text-align: center;
 }
+#jatteenMaara{
+    background-color: #F1DFD4;
+    padding: 20px;
+}
 /*TÄSTÄ ALKAA FOOTTERIN TYYLITTELY*/
 .tekijoidenKuvat{
     max-width: 70%;
