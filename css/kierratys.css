@@ -10,6 +10,7 @@ body{
 h2{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
+
 }
 /* NAVBARIN TYYLITTELY ALKAA*/
 /*annetaan taustaväri ja yli menevä on piilossa. Korekus maksimissaan 50px*/
@@ -82,6 +83,10 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 }
 /*NAVBAR TYYLITTELY LOPPUU*/
 
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
 .sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
     margin: 50px 15px 15px 15px ;
@@ -123,6 +128,10 @@ figcaption{
 }
 .jateInfo p{
     text-align: center;
+}
+#jatteenMaara{
+    background-color: #F1DFD4;
+    padding: 20px;
 }
 /*TÄSTÄ ALKAA FOOTTERIN TYYLITTELY*/
 .tekijoidenKuvat{
