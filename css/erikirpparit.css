@@ -7,7 +7,15 @@ body{
     display: flex;
     flex-direction: column;
 }
-h2{
+main {
+    background-color: #fff;
+    /*padding: 1rem;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h1, h2, h3, h4{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
@@ -38,8 +46,10 @@ h2{
     text-decoration: none;
     font-size: 13px;
 }
-
-
+#eriOtsikko{
+    text-align: center;
+    font-size: 30px;
+}
 
 /* Vaihdetaan linkkien väri tummemmaksi kun hiiri tulee niiden päälle */
 .navbar a:hover {
@@ -108,16 +118,6 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     max-width: 100%;
     height: auto;
 }
-
-main {
-    background-color: #fff;
-    /*padding: 1rem;*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-
 .kirppariArticlet header {
     background-color: #fff;
     margin: 5px;

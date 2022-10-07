@@ -101,6 +101,7 @@ figcaption{
 .kierratyskuvat img{
     max-width: 100%;
     height: auto;
+    justify-content: space-evenly;
 }
 .kierratyskuvat figure{
     margin: 10px;
