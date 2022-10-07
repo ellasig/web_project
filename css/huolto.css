@@ -115,9 +115,11 @@ footer{
     margin: 50px 40px 60px 40px;
 }
 h2{
-    margin: 20px 0 20px 0;
-    padding: 20px;
-    background-color: #D29874;
+   /* margin: 20px 0 20px 0;*/
+    /*padding: 20px;*/
+    text-align: center;
+    font-size: 30px;
+    /*background-color: #D29874; */
 }
 #rikki{
     padding: 20px;
