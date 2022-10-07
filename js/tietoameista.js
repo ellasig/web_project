@@ -52,7 +52,8 @@ tuiskuImg.addEventListener('mouseleave',function (){
 });
 sannaImg.addEventListener("mouseenter", function (){
     console.log('enter');
-    pElem.innerText = 'Olen Sanna, niin ja näin vanha, mitä haluut kertoo itestäs :)';
+    pElem.innerText = 'Moi, olen Sanna. Tein muutamia vuosia töitä ennenkuin päätin hakea opiskelemaan ja löysinkin mieluisen alan helposti. ' +
+        'Nautin erityisesti matematiikasta, fysiikasta ja ohjelmoinnista.';
 });
 sannaImg.addEventListener('mouseleave',function (){
     console.log('leave');
