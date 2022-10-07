@@ -92,6 +92,7 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     background-color: #68B0AB;
     padding: 10px;
     border-radius: 5px;
+    margin: 50px 40px 60px 40px;
 }
 figcaption{
     font-size: small;
