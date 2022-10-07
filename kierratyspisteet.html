@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kierratyspisteet</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="css/huolto.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/huolto.css">
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="container">
+  <!-- Navigointipalkki-->
+  <nav class="navbar" id="myNavbar">
+    <a href="index.html" class="active" > <img src="kuvat/logoImg.jpg" height="50" width="50" alt="logo"></a>
+    <a href="tietoaKierratuksesta.html">Tietoa kierrätyksestä</a>
+    <a href="vaatteidenhuoltaminen.html">Vaatteiden huoltaminen</a>
+    <a href="erilaisiakirpputoreja.html">Eri Kirpputoreja</a>
+    <a href="tapahtumat.html">Tulevat tapahtumat </a>
+    <a href="kartta.html">Kartta kirpputoreista</a>
+    <a href="tietoameista.html">Tietoa meistä</a>
+    <a href="javascript:void(0);" class="icon" onclick="navbarClass()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+  <div class="sisalto">
+    <section id="haku">
+      <header>
+        <h1>Hae kierrätyspisteet kaupungistasi</h1>
+      </header>
+      <p>Syötä allaolevaan hakukenttään erilaisia tapahtumiin liittyviä hakusanoja.<br>
+        Huom: syötä kaupunki isolla kirjaimella</p>
+      <input id="hakuteksti" onkeyup="teeKysely()" type="text" name="haku" placeholder="Hae kaupunki">
+      <button id="hakunappi">Hae</button>
+    </section>
+    <header>
+      <h2>Löytyneet hakutulokset:</h2>
+    </header>
+    <main id="hakutulokset">
+
+    </main>
+  </div>
+  <footer>
+    <figure>
+      <img class="tekijoidenKuvat" src="kuvat/tekijaElla.jpg" alt="Kuva sivun tekijästä: Ella Sigvart">
+      <figcaption>Ella Sigvart</figcaption>
+    </figure>
+    <figure>
+      <img class="tekijoidenKuvat"  src="kuvat/tekijaTuisku.jpg" alt="Kuva sivun tekijästä: Tuisku Närhi">
+      <figcaption>Tuisku Närhi</figcaption>
+    </figure>
+    <figure>
+      <img class="tekijoidenKuvat"src="kuvat/tekijaSanna.jpg" alt="Kuva sivun tekijästä: Sanna Lohkovuori">
+      <figcaption>Sanna Lohkovuori</figcaption>
+    </figure>
+    <ul>
+      <li>Tämä sivu on luotu kurssiprojektina</li>
+      <li>Olemme kaikki Metropolian opiskelijoita</li>
+      <li>Opiskelemme ensimmäistä vuotta tieto- ja viestintätekniikkaa</li>
+      <li>Sivu on luotu vuonna 2022</li>
+    </ul>
+  </footer>
+</div>
+<script src = "js/kierratyspisteet.js" ></script>
+</body>
+</html>

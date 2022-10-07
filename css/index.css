@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-h2{
+h1, h2, h3, h4{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
@@ -80,10 +80,13 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
         text-align: left;
     }
 }
+#navBar{
+z-index: 3;}
+
 /*NAVBAR TYYLITTELY LOPPUU*/
 
 #sisalto{
-    /*margin top: se määrä mitä header vie yläreunasta*/
+    /*margin top: se määrä mitä navbar vie yläreunasta*/
     margin-top: 50px;
     overflow: auto;
 }
@@ -91,9 +94,6 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     background-color: white;
     width: 100%;
     white-space: normal;
-}
-#myNavbar{
-    z-index: 3;
 }
 video{
     float: left;
@@ -136,11 +136,21 @@ ul{
 }
 audio{
     padding-top: 20px;
-    margin: 10px;
+    margin: 15px;
 }
-details{
+#esituotanto{
+    color: black;
+    background-color: #E6C6B2;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 15px;
+}
+a:hover{
+    background-color: #D29874;
+}
+/*details{
     float: top;
-}
+}*/
 .tekijoidenKuvat{
     margin-bottom: 20px;
     margin-top: 30px;
