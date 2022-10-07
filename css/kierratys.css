@@ -110,18 +110,23 @@ figcaption{
     justify-content: space-evenly;
 }
 .kierratyskuvat figure{
-    margin: 10px;
+    /*margin: 10px;*/
+    margin: 50px 40px 60px 40px;
 }
 
 #kierratysInfo{
     background-color: #68B0AB;
     border-radius: 5px;
     padding: 10px;
-    margin: 15px 10px;
+    /*margin: 15px 10px;*/
+    margin: 50px 40px 60px 40px;
 }
 .jateInfo{
     text-align: left;
-    margin: 20px 10px;
+    /*margin: 20px 10px;*/
+    background-color: #F1DFD4;
+    margin: 50px 40px 60px 40px;
+    padding: 20px;
 }
 .jateInfo header{
     text-align: center;
@@ -132,6 +137,7 @@ figcaption{
 #jatteenMaara{
     background-color: #F1DFD4;
     padding: 20px;
+    margin: 50px 40px 60px 40px;
 }
 /*TÄSTÄ ALKAA FOOTTERIN TYYLITTELY*/
 .tekijoidenKuvat{
@@ -146,4 +152,8 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+#kierrataGrafiikka {
+    margin: 0px 40px 20px 40px;
 }

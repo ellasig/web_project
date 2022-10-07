@@ -110,9 +110,10 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 .kirppariArticlet{
     background-color: #F1DFD4;
     padding: 20px;
-    margin: 15px;
     max-width: 30% ;
     border-radius: 5px;
+    margin: 50px 40px 60px 40px;
+
 }
 .kirppariArticlet img{
     max-width: 100%;
