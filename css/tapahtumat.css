@@ -108,7 +108,8 @@ main{
     justify-content: space-evenly;
 }
 article{
-    margin: 20px 10px 10px 20px;
+    /* margin: 20px 10px 10px 20px; */
+    margin: 50px 40px 60px 40px;
     padding: 15px;
     background-color: #F1DFD4;
     border-radius: 5px;
