@@ -82,11 +82,14 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
         text-align: left;
     }
 }
+/*jotta kartta ei mene navbarin päälle*/
+#navBar{
+    z-index: 3;}
 /*NAVBAR TYYLITTELY LOPPUU*/
 
 #sisalto{
     /*50px ylhäällä, jotta navbar ei peitä sivua*/
-    margin: 50px 20px 20px 20px;
+    margin: 60px 40px 30px 40px
 }
 main {
     display: flex;
@@ -101,6 +104,7 @@ main {
     width: 60%;
     height: 400px;
     margin: 10px 0px;
+    z-index: 1;
 }
 
 .navigoi {

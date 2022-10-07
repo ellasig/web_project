@@ -97,6 +97,7 @@ figcaption{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
 }
 .kierratyskuvat img{
     max-width: 100%;
