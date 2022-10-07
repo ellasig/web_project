@@ -168,6 +168,10 @@ footer{
     flex-direction: row;
     align-items: center;
 }
+#huoltoVinkit{
+    padding: 20px;
+    margin: 20px;
+}
 
 /*
 Lila: #725D68

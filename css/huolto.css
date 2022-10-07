@@ -104,27 +104,23 @@ footer{
 #kayttoIka{
     background-color: #F1DFD4;
     padding: 20px;
-    /*margin: 20px 0 20px 0; */
+    margin: 50px 50px 0 50px;
     padding-bottom: 30px;
-    margin: 50px 40px 60px 40px;
 }
 #huolto{
     background-color: #F1DFD4;
     padding: 20px;
-    /* margin: 20px 0 20px 0; */
-    margin: 50px 40px 60px 40px;
+    margin: 0 50px 60px 50px;
 }
 h2{
-    margin: 20px 0 20px 0;
+    margin: 60px 50px 0 50px;
     padding: 20px;
     background-color: #D29874;
 }
 #rikki{
-    padding: 20px;
-    padding-bottom: 5%;
-    background-color: #F1DFD4;
-    /*margin: 10px 0 10px 0; */
-    margin: 50px 40px 60px 40px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    margin: 0 40px 0 40px;
 }
 #rikki section{
     display: flex;
@@ -132,7 +128,7 @@ h2{
 }
 #rikkiTeksti{
     max-width: 50%;
-    margin: 10px;
+    margin: 15px 0 0 10px;
 }
 #rikkikuva{
     max-width: 100%;
@@ -141,7 +137,7 @@ h2{
 #pesu{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /*justify-content: center;*/ /*Kokeiltu ottaa pois jottei kuva istuisi keskellä, pelkästään teksti*/
     margin: 30px 5px 5px 15px;
 }
 
@@ -152,9 +148,10 @@ h2{
 
 #vinkitPesuun {
     max-width: 40%;
+    margin-top: 30px;
 }
 #vinkitPesuun li{
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .kierratyskuvat{
@@ -174,6 +171,5 @@ h2{
     margin: 10px 0 0 0;
     font-size: small;
 }
-#huoltoVinkit{
-    padding: 20px;
-}
+
+
