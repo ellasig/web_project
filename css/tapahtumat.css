@@ -82,6 +82,11 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 }
 /*NAVBAR TYYLITTELY LOPPUU*/
 
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
 .sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
     margin-top: 50px;
