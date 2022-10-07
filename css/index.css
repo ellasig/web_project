@@ -111,11 +111,12 @@ ul{
     padding: 20px;
     background-color: #F1DFD4;
     padding-bottom: 20%;
+    margin: 50px 40px 60px 40px;
 }
 #huolto{
     padding: 20px;
     background-color: #F1DFD4;
-    margin-top: 20px;
+    margin: 0 40px 60px 40px;
     /* Vaatteen huolto kohta */
 }
 #slideKuva{
