@@ -104,13 +104,15 @@ footer{
 #kayttoIka{
     background-color: #F1DFD4;
     padding: 20px;
-    margin: 20px 0 20px 0;
+    /*margin: 20px 0 20px 0; */
     padding-bottom: 30px;
+    margin: 50px 40px 60px 40px;
 }
 #huolto{
     background-color: #F1DFD4;
     padding: 20px;
-    margin: 20px 0 20px 0;
+    /* margin: 20px 0 20px 0; */
+    margin: 50px 40px 60px 40px;
 }
 h2{
     margin: 20px 0 20px 0;
@@ -121,7 +123,8 @@ h2{
     padding: 20px;
     padding-bottom: 5%;
     background-color: #F1DFD4;
-    margin: 10px 0 10px 0;
+    /*margin: 10px 0 10px 0; */
+    margin: 50px 40px 60px 40px;
 }
 #rikki section{
     display: flex;
