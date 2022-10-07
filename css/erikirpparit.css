@@ -116,12 +116,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-article {
-    /* width: calc(100% / 3 - 2rem); */
-    /*width: 30%;
-    padding: 1rem;
-    box-sizing: border-box;*/
-}
+
 
 .kirppariArticlet header {
     background-color: #fff;
