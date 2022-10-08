@@ -1,12 +1,13 @@
 /*
 * Kehittäjät: Tuisku Närhi, Ella Sigvart, Sanna Lohkovuori
-* Versio 1.1
-* 1.10.2022
-* */
+* Versio 2.1
+* 8.10.2022
+ */
 
 'use strict';
 
 //Navbarista responsiivinen:
+
 //Vaihdellaan responsive classia navbariin kun käyttäjä painaa ikonia
 function navbarClass() {
     let nav = document.getElementById("myNavbar");

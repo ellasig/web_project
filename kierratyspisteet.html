@@ -5,14 +5,13 @@
     <title>kierratyspisteet</title>
 </head>
 <body>
-<link rel="stylesheet" type="text/css" href="css/huolto.css">
+<link rel="stylesheet" type="text/css" href="css/pisteetKokeilu.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/huolto.css">
+<link rel="stylesheet" href="css/kie.css">
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 <div class="container">
   <!-- Navigointipalkki-->
   <nav class="navbar" id="myNavbar">
@@ -27,21 +26,34 @@
       <i class="fa fa-bars"></i>
     </a>
   </nav>
-  <div class="sisalto">
+  <div id="kierratyspisteet">
     <section id="haku">
       <header>
         <h1>Hae kierrätyspisteet kaupungistasi</h1>
       </header>
-      <p>Syötä allaolevaan hakukenttään erilaisia tapahtumiin liittyviä hakusanoja.<br>
-        Huom: syötä kaupunki isolla kirjaimella</p>
-      <input id="hakuteksti" onkeyup="teeKysely()" type="text" name="haku" placeholder="Hae kaupunki">
-      <button id="hakunappi">Hae</button>
+      <p>Kirjoita kaupunkisi hakukenttään
+      <br>HUOM: kirjoita kaupunki isolla kirjaimella</p>
+      <input id="hakuteksti" name="haku" placeholder="Kaupunkisi" type="text">
+      <p>Valitse haluamasi kierrätettävät materiaalit painamalla napeista. <br>
+      Jos haluat nähdä kaikkien materiaalien kierrätyspisteet, sinun ei tarvitse valita yhtäkään.</p>
+      <div class="materiaaliValikko">
+        <div id="valikko">
+          <button id="tekstiili">Tekstiili</button>
+          <button id="purkujate">Rakennus- ja purkujäte</button>
+          <button id="puu">Puu</button>
+          <button id="lamput" onclick="lamput()">Lamput</button>
+          <button id="sahko" onclick="sahkolaitteet()">Sähkölaitteet (SER)</button>
+          <button id="vaarallinen" onclick="vaarallinen()">Vaarallinen jäte</button>
+        </div>
+        <button id="hakunappi">Hae</button>
+        <button id="reset">resetoi haku</button>
+      </div>
     </section>
     <header>
       <h2>Löytyneet hakutulokset:</h2>
     </header>
     <main id="hakutulokset">
-
+        <!--Hakutulokset tulee tänne-->
     </main>
   </div>
   <footer>
@@ -54,7 +66,7 @@
       <figcaption>Tuisku Närhi</figcaption>
     </figure>
     <figure>
-      <img class="tekijoidenKuvat"src="kuvat/tekijaSanna.jpg" alt="Kuva sivun tekijästä: Sanna Lohkovuori">
+      <img class="tekijoidenKuvat" src="kuvat/tekijaSanna.jpg" alt="Kuva sivun tekijästä: Sanna Lohkovuori">
       <figcaption>Sanna Lohkovuori</figcaption>
     </figure>
     <ul>

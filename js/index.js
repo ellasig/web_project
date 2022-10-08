@@ -23,13 +23,13 @@ const huoltoKuvat= [
     {filename: "kuvat/slideshow1.jpg",
     alt: 'Kuva vaatteista'},
     {filename: "kuvat/slideshow2.jpg",
-    caption: 'pieniä vikoja voi korjata ompelemalla'},
+    alt: 'kuva ompeluvälineistä'},
     {filename: "kuvat/slideshow3.jpg",
-    caption: 'Villa puhdistaa itse itseään eikä sitä tarvitse pestä kokoaikaa'},
+    alt: 'kuva villapaidoista'},
     {filename: "kuvat/yhdistelmaKuva_slideshow.jpg",
-    caption: 'kierrätäthän vaatteet, joita et enää käytä'},
+    alt: 'kuva vaatteista'},
     {filename: "kuvat/slideshow4.jpg",
-    caption: 'Silittämällä saat ehostettua vaatteita.'}
+    alt: 'kuva silittämisestä'}
 ];
 
 let curIndex = 0;
@@ -37,6 +37,7 @@ let imgDuration = 5000;
 
 function slideShow() {
     document.getElementById('slideKuva').src = huoltoKuvat[curIndex].filename;
+    document.getElementById('slideKuva').alt = huoltoKuvat[curIndex].alt;
     curIndex++;
     if (curIndex === huoltoKuvat.length) { curIndex = 0; }
     setTimeout("slideShow()", imgDuration);
