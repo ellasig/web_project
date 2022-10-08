@@ -113,7 +113,7 @@ figcaption{
 }
 .kierratyskuvat figure{
     /*margin: 10px;*/
-    margin: 50px 40px 60px 40px;
+    margin: 50px 40px 30px 40px;
 }
 
 #kierratysInfo{
@@ -123,23 +123,23 @@ figcaption{
     /*margin: 15px 10px;*/
     margin: 50px 40px 60px 40px;
 }
-.jateInfo{
+#jateInfo{
     text-align: left;
-    background-color: #F1DFD4;
-    margin: 50px 40px 60px 40px;
+    background-color: white;
+    margin: 0px 40px 0px 40px;
     padding: 20px;
 }
 .jateInfo header{
-    text-align: center;
+    text-align: left;
 }
 .jateInfo p{
-    text-align: center;
+    text-align: left;
 }
 #jatteenMaara{
     background-color: #F1DFD4;
-    padding: 20px;
-    margin: 50px 40px 60px 40px;
-    text-align: center;
+    padding: 40px;
+    margin: 30px 40px 60px 40px;
+    text-align: left;
 }
 #kierrataGrafiikka {
     margin: 0 40px 20px 40px;
