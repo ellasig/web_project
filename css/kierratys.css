@@ -87,7 +87,7 @@ h2 {
     text-align: center;
     font-size: 30px;
 }
-.sisalto{
+#sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
     margin: 50px 15px 15px 15px ;
     overflow: auto;
@@ -139,6 +139,69 @@ figcaption{
     padding: 20px;
     margin: 50px 40px 60px 40px;
 }
+#kierrataGrafiikka {
+    margin: 0 40px 20px 40px;
+    max-width: 100%;
+    height: auto;
+}
+.pisteet{
+    margin: 50px 40px;
+    border: solid #68B0AB;
+}
+button{
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: black;
+    border: 2px solid #68B0AB;
+    border-radius: 2px;
+    margin: 10px 2px;
+    transition-duration: 0.4s;
+    padding: 5px;
+}
+button:hover {
+    background-color: #68B0AB; /* Green */
+    color: black;
+    border-radius: 2px;
+}
+#valikko .active{
+    background-color: #68B0AB;
+    color: black;
+    border-radius: 2px;
+}
+#hakunappi{
+    background-color: white;
+    color: black;
+    border: 2px solid #E6C6B2;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+}
+#hakunappi:hover{
+    background-color: #E6C6B2;
+    color: black;
+    border-radius: 2px;
+}
+#hakunappi .active{
+    background-color: #E6C6B2;
+    color: black;
+    border-radius: 2px;
+}
+#reset{
+    background-color: white;
+    color: black;
+    border: 2px solid #D29874;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+}
+#reset:hover{
+    background-color: #D29874;
+    color: black;
+    border-radius: 2px;
+}
+#reset .active{
+    background-color: #D29874;
+    color: black;
+    border-radius: 2px;
+}
 /*TÄSTÄ ALKAA FOOTTERIN TYYLITTELY*/
 .tekijoidenKuvat{
     max-width: 70%;
@@ -147,13 +210,9 @@ figcaption{
 footer{
     width: 100%;
     padding: 0;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0 0 0;
     background-color: #E6C6B2;
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-#kierrataGrafiikka {
-    margin: 0px 40px 20px 40px;
 }

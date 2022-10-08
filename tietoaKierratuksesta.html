@@ -31,11 +31,12 @@
             <i class="fa fa-bars"></i>
         </a>
     </nav>
-    <div class="sisalto">
+    <div id="sisalto">
     <!-- Sisälö alkaa -->
         <header>
             <h2>Tietoa kierrätyksestä </h2>
         </header>
+        <section id="infotekstit">
         <p id="kierratysInfo">Kierrätys tarkoittaa materiaalin, esineen tai muun asian käyttämistä hyödyksi uudessa asiayhteydessä.<br></p>
         <section class="kierratyskuvat">
             <figure>
@@ -51,7 +52,7 @@
                 <img src="kuvat/kierratus4.jpg" alt="kuva kierrätysastiasta">
             </figure>
         </section>
-        <article class="jateInfo">
+        <article id="jateInfo">
         <header>
                 <h3> Miten jätteet lajitellaan? </h3>
             </header>
@@ -73,9 +74,38 @@
                 <li> Hyödynnä tavara loppuun asti </li>
         </uL>
         </article>
+        </section>
         <figure>
             <img id="kierrataGrafiikka" src="kuvat/harkitseGrafiikka.jpg">
         </figure>
+        <div id="kierratyspisteet">
+            <section id="haku">
+                <header>
+                    <h3>Hae kierrätyspisteet kaupungistasi</h3>
+                </header>
+                <p id="kaupunkiInfo">Kirjoita kaupunkisi hakukenttään<br>
+                    HUOM: kirjoita kaupunki isolla kirjaimella</p>
+                <input id="hakuteksti" name="haku" placeholder="Kaupunkisi" type="text">
+                <p id="materiaalitInfo">Valitse haluamasi kierrätettävät materiaalit painamalla napeista. <br>
+                    Jos haluat nähdä kaikkien materiaalien kierrätyspisteet, sinun ei tarvitse valita yhtäkään.</p>
+                    <div id="valikko">
+                        <button id="tekstiili">Tekstiili</button>
+                        <button id="purkujate">Rakennus- ja purkujäte</button>
+                        <button id="puu">Puu</button>
+                        <button id="lamput" onclick="lamput()">Lamput</button>
+                        <button id="sahko" onclick="sahkolaitteet()">Sähkölaitteet (SER)</button>
+                        <button id="vaarallinen" onclick="vaarallinen()">Vaarallinen jäte</button>
+                    </div>
+                    <button id="hakunappi">Hae</button>
+                    <button id="reset">resetoi haku</button>
+            </section>
+            <header>
+                <h4>Löytyneet hakutulokset:</h4>
+            </header>
+            <main id="hakutulokset">
+                <!--Hakutulokset tulee tänne-->
+            </main>
+        </div>
     </div>
     <footer>
         <figure>

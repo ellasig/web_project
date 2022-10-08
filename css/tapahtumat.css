@@ -7,7 +7,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-h2{
+h1, h2, h3, h4{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
@@ -92,9 +92,24 @@ h2 {
     margin-top: 50px;
     overflow: auto;
     text-align: center;
-
 }
-
+#hakunappi{
+    background-color: white;
+    color: black;
+    border: 2px solid #E6C6B2;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+}
+#hakunappi:hover{
+    background-color: #E6C6B2;
+    color: black;
+    border-radius: 2px;
+}
+#hakunappi .active{
+    background-color: #E6C6B2;
+    color: black;
+    border-radius: 2px;
+}
 #haku{
     margin: 10px;
 }

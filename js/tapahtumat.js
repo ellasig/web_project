@@ -38,13 +38,11 @@ hakunappi.addEventListener('click', teeKysely);
 function teeKysely() {
     // haetaan html-sivulta käyttäjän antama hakuteksti (muista .value)
     let hakusana = document.getElementById('hakuteksti').value;
-
-    // muodostetaan ja tulostetaan konsoliin lopullinen hakukysely
+    // muodostetaan ja tulostetaan konsoliin hakukysely
     apiKysely = apiurl + hakusana;
-
     console.log("Lähetettävä kysely: " + apiKysely);
+    //muodostetaan lopullinen proxykysely, joka lähetetään
     let proxyKysely = proxy + encodeURIComponent(apiKysely);
-
     // kutsutaan fetch-jutut hoitavaa funktiota
     teeHaku(proxyKysely);        // parametrina hakulause
 }
@@ -76,8 +74,9 @@ function vastaus(jsonContents){
                      <article> 
                             <header>
                                 <h3>
-                                ${jsonData.data[i].name.fi} </header>      
-                                </h3>                
+                                ${jsonData.data[i].name.fi}      
+                                </h3>            
+                            </header>    
                             <p> ${jsonData.data[i].description.body} </p>
                             <link>
                                 <a href = "${jsonData.data[i].info_url}" >Tapahtuman sivulle</a>
