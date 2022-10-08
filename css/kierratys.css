@@ -123,7 +123,6 @@ figcaption{
 }
 .jateInfo{
     text-align: left;
-    /*margin: 20px 10px;*/
     background-color: #F1DFD4;
     margin: 50px 40px 60px 40px;
     padding: 20px;
@@ -138,6 +137,7 @@ figcaption{
     background-color: #F1DFD4;
     padding: 20px;
     margin: 50px 40px 60px 40px;
+    text-align: center;
 }
 #kierrataGrafiikka {
     margin: 0 40px 20px 40px;
