@@ -15,8 +15,10 @@ h1, h2, h3, h4{
 #kierrattaminen h2{
     margin: 0;
 }
+
 /* NAVBARIN TYYLITTELY ALKAA*/
-/*annetaan taustaväri ja yli menevä on piilossa. Korekus maksimissaan 50px*/
+/*annetaan taustaväri. Korekus maksimissaan 50px.
+Leveys koko näytön.*/
 .navbar {
     /*navbar pysyy näytön yläreunassa*/
     position: fixed;
@@ -26,6 +28,7 @@ h1, h2, h3, h4{
     overflow: hidden;
     height: 50px;
 }
+
 /*lisätään responsive classin navbarille korkeus*/
 .navbar.responsive{
     height: fit-content;
@@ -41,6 +44,11 @@ h1, h2, h3, h4{
     text-decoration: none;
     font-size: 13px;
 }
+/*navbarin logo padding ja margin 0*/
+#aLogo{
+    margin: 0;
+    padding: 0;
+}
 
 /* Vaihdetaan linkkien väri tummemmaksi kun hiiri tulee niiden päälle */
 .navbar a:hover {
@@ -50,18 +58,18 @@ h1, h2, h3, h4{
 
 /* lisätään active classin omaavien tyylittelyä*/
 .navbar a.active {
-    background-color: #68B0AB;
-    color: black;
     padding: 0;
 }
 
-/* piilotetaan linkit pienillä näytöillä */
+/* piilotetaan ikoni isolla näytöllä */
 .navbar .icon {
     display: none;
 }
 /*liian pienessä näytössä piilotetaan kaikki muut linkit paitsi logo/koti ja hampurilaisvalikko */
 @media screen and (max-width: 900px) {
+    /*muut linkit piiloon paitsi eka lapsi eli logo*/
     .navbar a:not(:first-child) {display: none;}
+    /*ikoni tulee näkyviin*/
     .navbar a.icon {
         float: right;
         display: block;
@@ -72,6 +80,7 @@ h1, h2, h3, h4{
 tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pienissä näytöissä*/
 @media screen and (max-width: 900px) {
     .navbar.responsive {position: relative;}
+    /*ikoni pysyy samassa paikassa oikealla ylhäällä*/
     .navbar.responsive a.icon {
         position: absolute;
         right: 0;
@@ -86,7 +95,11 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 #navBar{
 z-index: 3;}
 
+#myNavbar{
+    z-index: 3;
+}
 /*NAVBAR TYYLITTELY LOPPUU*/
+
 
 #sisalto{
     /*margin top: se määrä mitä navbar vie yläreunasta*/
@@ -148,12 +161,24 @@ audio{
     padding: 5px;
     margin: 15px;
 }
-a:hover{
+details a:hover{
     background-color: #D29874;
 }
-/*details{
+details{
     float: top;
-}*/
+}
+/*video ja teksti allekkain kapeassa näytössä*/
+@media screen and (max-width: 700px) {
+    video{
+        margin: 0 0 20px 0;
+        width: 100%;
+        z-index: 1;}
+    #kierrattaminen{
+        width: 90%;
+        margin: 0;
+    }
+
+}
 .tekijoidenKuvat{
     margin-bottom: 20px;
     margin-top: 30px;
@@ -163,6 +188,7 @@ a:hover{
     height: auto;
 }
 footer{
+    width: 100%;
     background-color: #E6C6B2;
     display: flex;
     flex-direction: row;

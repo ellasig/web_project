@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>kartta</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.css" rel="stylesheet">
-    <link href="css/kartta.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/kartta.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -15,7 +14,7 @@
 <body>
 <div class="container">
     <!-- Navigointipalkki-->
-    <nav class="navbar" id="navBar">
+    <nav class="navbar" id="myNavbar">
         <a href="index.html" id="aLogo" > <img src="kuvat/logoImg.jpg" height="50" width="50" alt="logo"></a>
         <a href="tietoaKierratuksesta.html">Tietoa kierrätyksestä</a>
         <a href="vaatteidenhuoltaminen.html">Vaatteiden huoltaminen</a>
@@ -33,6 +32,12 @@
             <h1>Kirpputorit kartalla</h1>
         </header>
         <p>Allaolevasta kartasta löydät kirpputorit 5km säteellä sijainnistasi. </p>
+        <div class="navigoi">
+            <ul>
+                <li><a class="nappi" href="#" id="paikanna">Paikanna</a></li>
+                <li><a class="nappi" href="#" target="_blank" id="navigoi">Navigoi</a></li>
+            </ul>
+        </div>
         <main>
         <div id="map">
             <!--tähän tulee kartta-->
@@ -45,12 +50,6 @@
                 <p id="lisatiedot"></p>
             </article>
         </main>
-        <div class="navigoi">
-            <ul>
-                <li><a class="nappi" href="#" id="paikanna">Paikanna</a></li>
-                <li><a class="nappi" href="#" target="_blank" id="navigoi">Navigoi</a></li>
-            </ul>
-        </div>
     </div>
     <footer>
         <figure>

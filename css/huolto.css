@@ -7,7 +7,8 @@ body{
     display: flex;
     flex-direction: column;
 }
-h2{
+
+h1, h2, h3, h4{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
@@ -38,9 +39,6 @@ h2{
     text-decoration: none;
     font-size: 13px;
 }
-
-
-
 /* Vaihdetaan linkkien väri tummemmaksi kun hiiri tulee niiden päälle */
 .navbar a:hover {
     background-color: #D29874;
@@ -49,8 +47,6 @@ h2{
 
 /* lisätään active classin omaavien tyylittelyä*/
 .navbar a.active {
-    background-color: #68B0AB;
-    color: black;
     padding: 0;
 }
 

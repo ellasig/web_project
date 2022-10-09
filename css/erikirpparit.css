@@ -59,8 +59,6 @@ h1, h2, h3, h4{
 
 /* lisätään active classin omaavien tyylittelyä*/
 .navbar a.active {
-    background-color: #68B0AB;
-    color: black;
     padding: 0;
 }
 
@@ -76,7 +74,6 @@ h1, h2, h3, h4{
         display: block;
     }
 }
-
 /*responsive class lisätään elementille kun js suorittaa funktion käyttäjän painettua valikkoa.
 tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pienissä näytöissä*/
 @media screen and (max-width: 900px) {
@@ -110,9 +107,10 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 .kirppariArticlet{
     background-color: #F1DFD4;
     padding: 20px;
-    margin: 15px;
     max-width: 30% ;
     border-radius: 5px;
+    margin: 50px 40px 60px 40px;
+
 }
 .kirppariArticlet img{
     max-width: 100%;
@@ -143,6 +141,7 @@ footer img {
 figcaption {
     text-align: center;
 }
+
 footer {
     background-color: #E6C6B2;
     display: flex;

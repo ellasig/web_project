@@ -9,14 +9,17 @@
 //Vaihdellaan responsive classia navbariin kun käyttäjä painaa ikonia
 function navbarClass() {
     let nav = document.getElementById("myNavbar");
+    //jos class on navbar -> vaihtuu/lisääntyy siihen responsive
     if (nav.className === "navbar") {
         nav.className += " responsive";
+        //muuten class on navbar
     } else {
         nav.className = "navbar";
     }
 }
-
-const picArray = [
+//Tehdään array kirpputoreille
+//alkioihin lisätään eri kirpparien tiedot
+const kirppisArray = [
     {
         title: 'Fida',
         alt: 'kuva fidan logosta',
@@ -49,39 +52,39 @@ const picArray = [
     }
     ];
 
+//haetaan tarvittavat html elementit
 const mainElem = document.querySelector('main');
 
-for (let i = 0; i < picArray.length; i++) {
-
+//looppi jolla käydään kirppisarray läpi
+for (let i = 0; i < kirppisArray.length; i++) {
+    //luodaan article elementti ja annetaan sille classname
     let articleElem = document.createElement('article');
     articleElem.className = 'kirppariArticlet';
-
+    //luodaan header elementti ja h2 elementti. h2 arvoksi annetaan sen hetkisen arrayn title
     let headerElem = document.createElement('header');
     let h2Elem = document.createElement('h2');
-    h2Elem.innerHTML = picArray[i].title
-
-
+    h2Elem.innerHTML = kirppisArray[i].title
+    //h2 elementistä headerin lapsi
     headerElem.appendChild(h2Elem);
 
-
+    //luodaan figure elementti ja img elementti.
     let figureElem = document.createElement('figure');
     let imgElem = document.createElement('img');
-
-    imgElem.src = picArray[i].filename;
+    //annetaan img elementille source ja alt arraysta. img figuren lapseksi
+    imgElem.src = kirppisArray[i].filename;
     figureElem.appendChild(imgElem);
-    imgElem.alt = picArray[i].alt;
+    imgElem.alt = kirppisArray[i].alt;
 
+    //luodaan p elementti ja annetaan sille arraysta arvo
     let pElem = document.createElement('p');
-    pElem.innerHTML = picArray[i].description;
+    pElem.innerHTML = kirppisArray[i].description;
 
+    //kaikki elementit on articlen lapsia
     articleElem.appendChild(headerElem);
     articleElem.appendChild(figureElem);
     articleElem.appendChild(pElem);
 
+    //article on main elementin lapsi
     mainElem.appendChild(articleElem);
 }
-
-
-
-
 

@@ -1,7 +1,7 @@
 /*
-* Kehittäjät: Tuisku Närhi
+* Kehittäjät: Tuisku Närhi, Sanna Lohkovuori, Ella Sigvart
 * Versio 1.2
-* 5.10.2022
+* 7.10.2022
 * */
 
 'use strict'
@@ -18,12 +18,13 @@ function navbarClass() {
 }
 
 //APIN KÄYTTÖÄ
+//APIN dokumentaatio ja ohjeet: https://open-api.myhelsinki.fi/doc#
 
-const apiurl = "https://open-api.myhelsinki.fi/v1/events/?tags_search=";
-
-// lopullinen hakukysely, joka lähetetään nettiin.
+//apin osoitteen alkuosa muuttujaksi
+const apiOsoite = "https://open-api.myhelsinki.fi/v1/events/?tags_search=";
+//osoite jossa mukana käyttäjän hakusana
 let apiKysely;
-//cors ongelmaan apuja
+//cors ongelmaan apuja proxyosoitteelle
 const proxy = 'https://api.allorigins.win/get?url=';
 
 // Etsitään HTML-sivulta tarvittavat komponentit id:n avulla.
@@ -36,15 +37,13 @@ hakunappi.addEventListener('click', teeKysely);
 // Funktio muodostaa hakukyselyn.
 // Lopuksi funktio kutsuu teeHaku() funktiota.
 function teeKysely() {
-    // haetaan html-sivulta käyttäjän antama hakuteksti (muista .value)
+    // haetaan html-sivulta käyttäjän antama hakuteksti
     let hakusana = document.getElementById('hakuteksti').value;
-
-    // muodostetaan ja tulostetaan konsoliin lopullinen hakukysely
-    apiKysely = apiurl + hakusana;
-
+    // muodostetaan ja tulostetaan konsoliin hakukysely
+    apiKysely = apiOsoite + hakusana;
     console.log("Lähetettävä kysely: " + apiKysely);
+    //muodostetaan lopullinen proxykysely, joka lähetetään
     let proxyKysely = proxy + encodeURIComponent(apiKysely);
-
     // kutsutaan fetch-jutut hoitavaa funktiota
     teeHaku(proxyKysely);        // parametrina hakulause
 }
@@ -63,21 +62,26 @@ function teeHaku(proxyApiKysely)  {
 
 // Funktio hoitaa kyselystä saadun json-datan käsittelyn.
 // Funktio saa parametrina json-muodossa olevan datan.
-
 function vastaus(jsonContents){
+    //muutetaan väärässä muodossa oleva json oikeaan muotoon funktiolla
     let jsonData = JSON.parse(jsonContents.contents);
-    console.log('debug koko' + jsonData.data.length)
+    //tulostetaan konsoliin saatu oikeassa muodossa oleva data
     console.log(jsonData)
+    //haetaan elementti johon tulokset lisätään
     const hakutulokset = document.getElementById('hakutulokset');
+    //muuttuja johon lisättävä koodi tallennetaan
     let htmlKoodi= ``;
+    //tyhjennetään hakutulokset hakujen välissä
     hakutulokset.innerHTML = '';
+    //loop jossa käydään json data läpi ja liätään tarvittavt tiedot muuttujaan
     for(let i =0 ; i < jsonData.data.length ; i++){
         htmlKoodi += `             
                      <article> 
                             <header>
                                 <h3>
-                                ${jsonData.data[i].name.fi} </header>      
-                                </h3>                
+                                ${jsonData.data[i].name.fi}      
+                                </h3>            
+                            </header>    
                             <p> ${jsonData.data[i].description.body} </p>
                             <link>
                                 <a href = "${jsonData.data[i].info_url}" >Tapahtuman sivulle</a>
@@ -85,5 +89,6 @@ function vastaus(jsonContents){
                      </article>           
               `;
     }
+    //syötetään luotu koodi main elementtiin
     mainElem.innerHTML = htmlKoodi;
 }

@@ -4,12 +4,13 @@ body{
 .container{
     font-family: 'Montserrat', sans-serif;
 }
+/* headerin fontti*/
 h1, h2, h3, h4{
-    /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
 /* NAVBARIN TYYLITTELY ALKAA*/
-/*annetaan taustaväri ja yli menevä on piilossa. Korekus maksimissaan 50px*/
+/*annetaan taustaväri. Korekus maksimissaan 50px.
+Leveys koko näytön.*/
 .navbar {
     /*navbar pysyy näytön yläreunassa*/
     position: fixed;
@@ -35,6 +36,7 @@ h1, h2, h3, h4{
     text-decoration: none;
     font-size: 13px;
 }
+/*navbarin logo padding ja margin 0*/
 #aLogo{
     margin: 0;
     padding: 0;
@@ -46,21 +48,20 @@ h1, h2, h3, h4{
     color: black;
 }
 
-/* lisätään active classin oma
-avien tyylittelyä*/
+/* lisätään active classin omaavien tyylittelyä*/
 .navbar a.active {
-    background-color: #68B0AB;
-    color: black;
     padding: 0;
 }
 
-/* piilotetaan linkit pienillä näytöillä */
+/* piilotetaan ikoni isolla näytöllä */
 .navbar .icon {
     display: none;
 }
 /*liian pienessä näytössä piilotetaan kaikki muut linkit paitsi logo/koti ja hampurilaisvalikko */
 @media screen and (max-width: 900px) {
+    /*muut linkit piiloon paitsi eka lapsi eli logo*/
     .navbar a:not(:first-child) {display: none;}
+    /*ikoni tulee näkyviin*/
     .navbar a.icon {
         float: right;
         display: block;
@@ -71,6 +72,7 @@ avien tyylittelyä*/
 tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pienissä näytöissä*/
 @media screen and (max-width: 900px) {
     .navbar.responsive {position: relative;}
+    /*ikoni pysyy samassa paikassa oikealla ylhäällä*/
     .navbar.responsive a.icon {
         position: absolute;
         right: 0;
@@ -82,63 +84,67 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
         text-align: left;
     }
 }
+
 /*jotta kartta ei mene navbarin päälle*/
-#navBar{
+#myNavbar{
     z-index: 3;}
 /*NAVBAR TYYLITTELY LOPPUU*/
 
 #sisalto{
-    /*50px ylhäällä, jotta navbar ei peitä sivua*/
-    margin: 60px 40px 30px 40px
+    /* yli 50px ylhäällä, jotta navbar ei peitä sivua*/
+    margin: 60px 50px 40px 50px
 }
 main {
     display: flex;
     flex-direction: row;
 }
 #tiedot {
-    margin: 20px;
+    margin-left: 10px;
     max-width: 35%;
 }
-
 #map {
     width: 60%;
     height: 400px;
-    margin: 10px 0px;
+    margin: 0 10px 40px 0;
     z-index: 1;
 }
-
-.navigoi {
-    display: block;
-}
-
 .navigoi ul {
-    margin: 0;
+    margin:  15px 0 0 0;
     padding: 0;
     list-style-type: none;
+    display: inline-flex;
 }
-
 .navigoi li {
-    display: inline-block;
+    margin: 0 5px 0 0;
 }
-
 #navigoi {
     color: black;
-    background-color: #68B0AB;
+    background-color: #87bbb7;
     border-radius: 5px;
-    margin: 0px 15px 15px 0px
+    margin: 0 15px 15px 0;
+    padding: 3px;
+    transition-duration: 0.4s;
 }
-
+#navigoi:hover{
+    color: black;
+    background-color: #68B0AB;
+}
 #paikanna {
+    color: black;
+    background-color: #F1DFD4;
+    border-radius: 5px;
+    padding: 3px;
+    transition-duration: 0.4s;
+}
+#paikanna:hover{
     color: black;
     background-color: #E6C6B2;
     border-radius: 5px;
 }
-
 #osoite, #kaupunki, #lisatiedot {
     width: 100%;
     margin: 0.3rem 0;
 }
-
 .nappi {
     display: inline-block;
     line-height: 3rem;
@@ -147,7 +153,6 @@ main {
     padding: .5rem;
     text-decoration: none;
 }
-
 /* leaflet ikonit */
 .punainen-ikoni {
     background: #CE6060;
@@ -157,7 +162,6 @@ main {
     border-radius: 50%;
     line-height: 30px;
 }
-
 .vihrea-ikoni {
     background: #508C70;
     border: 5px solid rgba(255, 255, 255, 0.47);
@@ -179,4 +183,21 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+/*Kartta ja liikkeen tiedot allekkain kapealla näytöllä*/
+@media screen and (max-width: 800px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    #map {
+        width: 100%;
+        max-height: 400px;
+        margin: 0 0 10px 0;
+        z-index: 1;
+    }
+    #tiedot {
+        margin: 0;
+        max-width: 100%;
+    }
 }

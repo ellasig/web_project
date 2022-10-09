@@ -7,12 +7,13 @@ body{
     display: flex;
     flex-direction: column;
 }
-h2{
+h1, h2, h3, h4{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
 /* NAVBARIN TYYLITTELY ALKAA*/
-/*annetaan taustaväri ja yli menevä on piilossa. Korekus maksimissaan 50px*/
+/*annetaan taustaväri. Korekus maksimissaan 50px.
+Leveys koko näytön.*/
 .navbar {
     /*navbar pysyy näytön yläreunassa*/
     position: fixed;
@@ -38,6 +39,11 @@ h2{
     text-decoration: none;
     font-size: 13px;
 }
+/*navbarin logo padding ja margin 0*/
+#aLogo{
+    margin: 0;
+    padding: 0;
+}
 
 /* Vaihdetaan linkkien väri tummemmaksi kun hiiri tulee niiden päälle */
 .navbar a:hover {
@@ -47,18 +53,18 @@ h2{
 
 /* lisätään active classin omaavien tyylittelyä*/
 .navbar a.active {
-    background-color: #68B0AB;
-    color: black;
     padding: 0;
 }
 
-/* piilotetaan linkit pienillä näytöillä */
+/* piilotetaan ikoni isolla näytöllä */
 .navbar .icon {
     display: none;
 }
 /*liian pienessä näytössä piilotetaan kaikki muut linkit paitsi logo/koti ja hampurilaisvalikko */
 @media screen and (max-width: 900px) {
+    /*muut linkit piiloon paitsi eka lapsi eli logo*/
     .navbar a:not(:first-child) {display: none;}
+    /*ikoni tulee näkyviin*/
     .navbar a.icon {
         float: right;
         display: block;
@@ -69,6 +75,7 @@ h2{
 tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pienissä näytöissä*/
 @media screen and (max-width: 900px) {
     .navbar.responsive {position: relative;}
+    /*ikoni pysyy samassa paikassa oikealla ylhäällä*/
     .navbar.responsive a.icon {
         position: absolute;
         right: 0;
@@ -80,6 +87,7 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
         text-align: left;
     }
 }
+
 /*NAVBAR TYYLITTELY LOPPUU*/
 
 
@@ -92,9 +100,32 @@ h2 {
     margin-top: 50px;
     overflow: auto;
     text-align: center;
-
 }
-
+#hakunappi_kentta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#hakunappi{
+    background-color: #F1DFD4;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2px;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+    border-style: none;
+    margin-left: 5px;
+}
+#hakunappi:hover{
+    background-color: #E6C6B2;
+    color: black;
+    border-radius: 2px;
+}
+#hakunappi .active{
+    background-color: #E6C6B2;
+    color: black;
+    border-radius: 2px;
+}
 #haku{
     margin: 10px;
 }
@@ -108,7 +139,7 @@ main{
     justify-content: space-evenly;
 }
 article{
-    margin: 20px 10px 10px 20px;
+    margin: 40px 40px 60px 40px;
     padding: 15px;
     background-color: #F1DFD4;
     border-radius: 5px;
@@ -121,7 +152,7 @@ a{
     padding: 5px;
     border-radius: 3px;
     text-decoration: none;
-
+    transition-duration: 0.4s;
 }
 a:hover{
     background-color: #D29874;
@@ -138,7 +169,7 @@ figcaption{
 footer{
     width: 100%;
     padding: 0;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0 0 0;
     background-color: #E6C6B2;
     display: flex;
     flex-direction: row;

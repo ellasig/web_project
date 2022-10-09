@@ -1,6 +1,6 @@
 /*
-* Kehittäjät: Tuisku Närhi, Ella Sigvart, Sanna Lohkovuori
-* Versio 1.1
+* Kehittäjät: Tuisku Närhi
+* Versio 1.2
 * 5.10.2022
 * */
 
@@ -20,7 +20,7 @@ function navbarClass() {
 
 // elementit, joihin tulostetaan tiedot
 const nimi = document.getElementById('nimi');
-const asemanOsoite = document.getElementById('osoite');
+const kirpparinOsoite = document.getElementById('osoite');
 const kaupunki = document.getElementById('kaupunki');
 const lisatiedot = document.getElementById('lisatiedot');
 const navigoi = document.getElementById('navigoi');
@@ -55,7 +55,7 @@ const options = {
     maximumAge: 0,
 };
 
-// kustom ikonit: oma paikka punainen, kirppari vihreä
+// kustom ikonit: oma paikka punertava, kirppari vihertävä
 const punainenIkoni = L.divIcon({className: 'punainen-ikoni'});
 const vihreaIkoni = L.divIcon({className: 'vihrea-ikoni'});
 
@@ -81,20 +81,22 @@ function paivitaKartta(crd) {
     // Käytetään leaflet.js -kirjastoa näyttämään sijainti kartalla (https://leafletjs.com/)
     map.setView([crd.latitude, crd.longitude], zoomlevel);
 }
+//
 function lisaaMarker(crd, teksti, ikoni,  osoite, kaupunkiOsa, info) {
     const marker = L.marker([crd.latitude, crd.longitude], {icon: ikoni}).
+        //popup ikkunaan tulee kirpparin nimi
     bindPopup(teksti).
+    //lisätään loput tiedot oikeisiin elementteihin kun käyttäjä painaa markkeria
     on('popupopen', function(popup) {
         console.log(kaupunkiOsa)
         nimi.innerHTML = teksti;
-        asemanOsoite.innerHTML = osoite;
+        kirpparinOsoite.innerHTML = osoite;
         kaupunki.innerHTML = kaupunkiOsa;
         lisatiedot.innerHTML = `${info}`;
         navigoi.href = `https://www.google.com/maps/dir/?api=1&origin=${paikka.latitude},${paikka.longitude}&destination=${crd.latitude},${crd.longitude}&travelmode=driving`;
     });
     markers.addLayer(marker);
 }
-
 // Funktio, joka ajetaan, jos paikkatietojen hakemisessa tapahtuu virhe
 function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
@@ -111,7 +113,7 @@ map.on('mousedown', function() {
     console.log('paikannus keskeytetty?');
     navigator.geolocation.clearWatch(paikannus);
 });
-
+//zoom funkion
 map.on('zoom', function() {
     zoomlevel = map.getZoom();
     console.log(zoomlevel);
@@ -119,46 +121,42 @@ map.on('zoom', function() {
 
 // haetaan kirpputorit
 // API-dokumentaatio: https://open-api.myhelsinki.fi/doc#/v2places/listAll
-
-
 function haeOsoite(crd){
     const proxy = 'https://api.allorigins.win/get?url=';
     //distance filter: 5km säteellä sijainnista
     const osoite = `https://open-api.myhelsinki.fi/v2/places/?tags_search=Second%20hand&distance_filter=${crd.latitude}%2C${crd.longitude}%2C5`;
     let proxyOsoite = proxy + encodeURIComponent(osoite);
+    //kutsutaan funktio joka hakee apin datan. parametrina osoite
     haeKirpparit(proxyOsoite)
 }
 
-
 function haeKirpparit(kirpparit) {
-
     // suoritetaan hakukysely, fetch hoitaa mahdolliset tietoliikenneongelmat.
     fetch(kirpparit).then(function (response) {
         return response.json();
     }).then(function (json) {
-        vastaus(json);				// siirrytään varsinaisen datan käsittelyyn.
-    }).catch(function (error) {           // Jos tapahtuu virhe,
+        vastaus(json);				    // siirrytään varsinaisen datan käsittelyyn.
+    }).catch(function (error) {         // Jos tapahtuu virhe,
         console.log(error);             // kirjoitetaan virhe konsoliin.
     });
 }
 
+//funktio jolla käsitellään data
 function vastaus(jsonContents){
+    //apin data oikeaan  muotoon
     let jsonData = JSON.parse(jsonContents.contents);
     console.log('debug koko' + jsonData.data.length)
+    //käydään arrayna saatu data läpi ja lisätään tiedot oikeisiin muuttujiin
     for(let i =0 ; i < jsonData.data.length ; i++){
         const teksti = jsonData.data[i].name.fi;
         const kirppisOsoite = jsonData.data[i].location.address.street_address;
         const kirppisKaupunginOsa = jsonData.data[i].location.address.locality + `<br>` + jsonData.data[i].location.address.neighbourhood;
         const kirppisInfo = jsonData.data[i].description.intro;
-
-        console.log('debug teksti ' + teksti)
         const koordinaatit = {
             latitude: jsonData.data[i].location.lat,
             longitude: jsonData.data[i].location.lon,
         }
-        console.log(jsonData.data[i].location.lat);
-        console.log('debug koordinaatit' + koordinaatit.longitude + koordinaatit.latitude);
-
+        //kutsutaan funktiota, jolla markkerit tulee kartalle ja annetaan sille tarvittavat tiedot parametreina
         lisaaMarker(koordinaatit, teksti, vihreaIkoni, kirppisOsoite, kirppisKaupunginOsa, kirppisInfo);
     }
 }

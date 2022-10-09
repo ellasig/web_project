@@ -7,13 +7,14 @@ body{
     display: flex;
     flex-direction: column;
 }
-h2{
+h1,h2, h3, h4{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 
 }
 /* NAVBARIN TYYLITTELY ALKAA*/
-/*annetaan taustaväri ja yli menevä on piilossa. Korekus maksimissaan 50px*/
+/*annetaan taustaväri. Korekus maksimissaan 50px.
+Leveys koko näytön.*/
 .navbar {
     /*navbar pysyy näytön yläreunassa*/
     position: fixed;
@@ -39,6 +40,11 @@ h2{
     text-decoration: none;
     font-size: 13px;
 }
+/*navbarin logo padding ja margin 0*/
+#aLogo{
+    margin: 0;
+    padding: 0;
+}
 
 /* Vaihdetaan linkkien väri tummemmaksi kun hiiri tulee niiden päälle */
 .navbar a:hover {
@@ -48,18 +54,18 @@ h2{
 
 /* lisätään active classin omaavien tyylittelyä*/
 .navbar a.active {
-    background-color: #68B0AB;
-    color: black;
     padding: 0;
 }
 
-/* piilotetaan linkit pienillä näytöillä */
+/* piilotetaan ikoni isolla näytöllä */
 .navbar .icon {
     display: none;
 }
 /*liian pienessä näytössä piilotetaan kaikki muut linkit paitsi logo/koti ja hampurilaisvalikko */
 @media screen and (max-width: 900px) {
+    /*muut linkit piiloon paitsi eka lapsi eli logo*/
     .navbar a:not(:first-child) {display: none;}
+    /*ikoni tulee näkyviin*/
     .navbar a.icon {
         float: right;
         display: block;
@@ -70,6 +76,7 @@ h2{
 tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pienissä näytöissä*/
 @media screen and (max-width: 900px) {
     .navbar.responsive {position: relative;}
+    /*ikoni pysyy samassa paikassa oikealla ylhäällä*/
     .navbar.responsive a.icon {
         position: absolute;
         right: 0;
@@ -87,7 +94,7 @@ h2 {
     text-align: center;
     font-size: 30px;
 }
-.sisalto{
+#sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
     margin: 50px 15px 15px 15px ;
     overflow: auto;
@@ -110,28 +117,87 @@ figcaption{
     justify-content: space-evenly;
 }
 .kierratyskuvat figure{
-    margin: 10px;
+    /*margin: 10px;*/
+    margin: 50px 40px 30px 40px;
 }
 
 #kierratysInfo{
     background-color: #68B0AB;
     border-radius: 5px;
     padding: 10px;
-    margin: 15px 10px;
+    /*margin: 15px 10px;*/
+    margin: 50px 40px 60px 40px;
 }
-.jateInfo{
+#jateInfo{
     text-align: left;
-    margin: 20px 10px;
+    background-color: white;
+    margin: 0 40px 0 40px;
+    padding: 20px;
 }
 .jateInfo header{
-    text-align: center;
+    text-align: left;
 }
 .jateInfo p{
-    text-align: center;
+    text-align: left;
 }
 #jatteenMaara{
     background-color: #F1DFD4;
-    padding: 20px;
+    padding: 40px;
+    margin: 30px 40px 60px 40px;
+    text-align: left;
+}
+#kierrataGrafiikka {
+    max-width: 100%;
+    height: auto;
+}
+.pisteet{
+    margin: 50px 35px;
+    border: solid #68B0AB;
+}
+button{
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: black;
+    border: 2px solid #68B0AB;
+    border-radius: 2px;
+    margin: 10px 2px;
+    transition-duration: 0.4s;
+    padding: 5px;
+}
+button:hover {
+    background-color: #68B0AB; /* Green */
+    color: black;
+    border-radius: 2px;
+}
+#valikko .active{
+    background-color: #68B0AB;
+    color: black;
+    border-radius: 2px;
+}
+#hakunappi{
+    background-color: #F1DFD4;
+    color: black;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+    border-style: none;
+}
+#hakunappi:hover{
+    background-color: #D29874;
+    color: black;
+    border-radius: 2px;
+    border-style: none;
+}
+#reset{
+    background-color: #87bbb7;
+    color: black;
+    border-radius: 2px;
+    transition-duration: 0.4s;
+    border-style: none;
+}
+#reset:hover{
+    background-color: #68B0AB;
+    color: black;
+    border-radius: 2px;
 }
 /*TÄSTÄ ALKAA FOOTTERIN TYYLITTELY*/
 .tekijoidenKuvat{
@@ -141,7 +207,7 @@ figcaption{
 footer{
     width: 100%;
     padding: 0;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0 0 0;
     background-color: #E6C6B2;
     display: flex;
     flex-direction: row;
