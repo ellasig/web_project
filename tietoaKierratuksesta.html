@@ -37,46 +37,46 @@
             <h2>Tietoa kierrätyksestä </h2>
         </header>
         <section id="infotekstit">
-        <p id="kierratysInfo">Kierrätys tarkoittaa materiaalin, esineen tai muun asian käyttämistä hyödyksi uudessa asiayhteydessä.<br></p>
-        <section class="kierratyskuvat">
-            <figure>
-                <img src="kuvat/kierratus1.jpg" alt="kuva naisesta kierrättämässä">
-            </figure>
-            <figure>
-                <img src="kuvat/kierratus2.jpg" alt="kuva pulloista kassissa">
-            </figure>
-            <figure>
-                <img src="kuvat/kierratus3.jpg" alt="kuva pahvista">
-            </figure>
-            <figure>
-                <img src="kuvat/kierratus4.jpg" alt="kuva kierrätysastiasta">
-            </figure>
-        </section>
-        <article id="jateInfo">
-        <header>
-                <h3> Miten jätteet lajitellaan? </h3>
-            </header>
-            <ul>
-                <li> Lajittele jätteet aina niiden materiaalin mukaan</li>
-                <li> Älä laita viemäriin roskia, ruokaa tai ylimääräisiä kemikaaleja </li>
-                <li> Vie vaarallinen jäte aina sille kuuluvaan keräyspisteeseen </li>
-            </ul>
-            <p>Kun jätteet lajitellaan oikein,niiden materiaali voidaan hyödyntää uusien tavaroiden valmistuksessa.</p>
-        </article>
-        <article class="jateInfo" id="jatteenMaara">
-            <header>
-                <h3> Miten voit itse vähentää jätteen määrää?</h3>
-            </header>
-            <ul>
-                <li> Osta vain sellaisia tavaroita, joita oikeasti tarvitset </li>
-                <li> Suosi ja osta käytettyjä tavaroita </li>
-                <li> Huolehdi kaikista tavaroista ja säilytä niitä ohjeiden mukaan </li>
-                <li> Hyödynnä tavara loppuun asti </li>
-        </uL>
-        </article>
+            <p id="kierratysInfo">Kierrätys tarkoittaa materiaalin, esineen tai muun asian käyttämistä hyödyksi uudessa asiayhteydessä.<br></p>
+            <div class="kierratyskuvat">
+                <figure>
+                    <img src="kuvat/kierratus1.jpg" alt="kuva naisesta kierrättämässä">
+                </figure>
+                <figure>
+                    <img src="kuvat/kierratus2.jpg" alt="kuva pulloista kassissa">
+                </figure>
+                <figure>
+                    <img src="kuvat/kierratus3.jpg" alt="kuva pahvista">
+                </figure>
+                <figure>
+                    <img src="kuvat/kierratus4.jpg" alt="kuva kierrätysastiasta">
+                </figure>
+            </div>
+            <article id="jateInfo">
+                <header>
+                    <h3> Miten jätteet lajitellaan? </h3>
+                </header>
+                <ul>
+                    <li> Lajittele jätteet aina niiden materiaalin mukaan</li>
+                    <li> Älä laita viemäriin roskia, ruokaa tai ylimääräisiä kemikaaleja </li>
+                    <li> Vie vaarallinen jäte aina sille kuuluvaan keräyspisteeseen </li>
+                </ul>
+                <p>Kun jätteet lajitellaan oikein,niiden materiaali voidaan hyödyntää uusien tavaroiden valmistuksessa.</p>
+            </article>
+            <article class="jateInfo" id="jatteenMaara">
+                <header>
+                    <h3> Miten voit itse vähentää jätteen määrää?</h3>
+                </header>
+                <ul>
+                    <li> Osta vain sellaisia tavaroita, joita oikeasti tarvitset </li>
+                    <li> Suosi ja osta käytettyjä tavaroita </li>
+                    <li> Huolehdi kaikista tavaroista ja säilytä niitä ohjeiden mukaan </li>
+                    <li> Hyödynnä tavara loppuun asti </li>
+                </uL>
+            </article>
         </section>
         <figure>
-            <img id="kierrataGrafiikka" src="kuvat/harkitseGrafiikka.jpg">
+            <img id="kierrataGrafiikka" src="kuvat/harkitseGrafiikka.jpg" alt="grafiikka, jossa lukee: harkitse korjaa, kierrätä ">
         </figure>
         <div id="kierratyspisteet">
             <section id="haku">
@@ -88,16 +88,16 @@
                 <input id="hakuteksti" name="haku" placeholder="Kaupunkisi" type="text">
                 <p id="materiaalitInfo">Valitse haluamasi kierrätettävät materiaalit painamalla napeista. <br>
                     Jos haluat nähdä kaikkien materiaalien kierrätyspisteet, sinun ei tarvitse valita yhtäkään.</p>
-                    <div id="valikko">
-                        <button id="tekstiili">Tekstiili</button>
-                        <button id="purkujate">Rakennus- ja purkujäte</button>
-                        <button id="puu">Puu</button>
-                        <button id="lamput" onclick="lamput()">Lamput</button>
-                        <button id="sahko" onclick="sahkolaitteet()">Sähkölaitteet (SER)</button>
-                        <button id="vaarallinen" onclick="vaarallinen()">Vaarallinen jäte</button>
-                    </div>
-                    <button id="hakunappi">Hae</button>
-                    <button id="reset">resetoi haku</button>
+                <div id="valikko">
+                    <button id="tekstiili">Tekstiili</button>
+                    <button id="purkujate">Rakennus- ja purkujäte</button>
+                    <button id="puu">Puu</button>
+                    <button id="lamput" onclick="lamput()">Lamput</button>
+                    <button id="sahko" onclick="sahkolaitteet()">Sähkölaitteet (SER)</button>
+                    <button id="vaarallinen" onclick="vaarallinen()">Vaarallinen jäte</button>
+                </div>
+                <button id="hakunappi">Hae</button>
+                <button id="reset">resetoi haku</button>
             </section>
             <header>
                 <h4>Löytyneet hakutulokset:</h4>
@@ -117,7 +117,7 @@
             <figcaption>Tuisku Närhi</figcaption>
         </figure>
         <figure>
-            <img class="tekijoidenKuvat"src="kuvat/tekijaSanna.jpg" alt="Kuva sivun tekijästä: Sanna Lohkovuori">
+            <img class="tekijoidenKuvat" src="kuvat/tekijaSanna.jpg" alt="Kuva sivun tekijästä: Sanna Lohkovuori">
             <figcaption>Sanna Lohkovuori</figcaption>
         </figure>
         <ul>

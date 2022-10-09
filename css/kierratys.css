@@ -13,7 +13,8 @@ h1,h2, h3, h4{
 
 }
 /* NAVBARIN TYYLITTELY ALKAA*/
-/*annetaan taustaväri ja yli menevä on piilossa. Korekus maksimissaan 50px*/
+/*annetaan taustaväri. Korekus maksimissaan 50px.
+Leveys koko näytön.*/
 .navbar {
     /*navbar pysyy näytön yläreunassa*/
     position: fixed;
@@ -39,6 +40,11 @@ h1,h2, h3, h4{
     text-decoration: none;
     font-size: 13px;
 }
+/*navbarin logo padding ja margin 0*/
+#aLogo{
+    margin: 0;
+    padding: 0;
+}
 
 /* Vaihdetaan linkkien väri tummemmaksi kun hiiri tulee niiden päälle */
 .navbar a:hover {
@@ -48,20 +54,18 @@ h1,h2, h3, h4{
 
 /* lisätään active classin omaavien tyylittelyä*/
 .navbar a.active {
-    background-color: #68B0AB;
-    color: black;
     padding: 0;
 }
 
-/* piilotetaan hampurilaisikoni isolla näytöllä*/
+/* piilotetaan ikoni isolla näytöllä */
 .navbar .icon {
     display: none;
 }
 /*liian pienessä näytössä piilotetaan kaikki muut linkit paitsi logo/koti ja hampurilaisvalikko */
 @media screen and (max-width: 900px) {
-    /*navbarin linkit pois*/
+    /*muut linkit piiloon paitsi eka lapsi eli logo*/
     .navbar a:not(:first-child) {display: none;}
-    /*navbarin iconi näkyviin oikeaan kulmaan*/
+    /*ikoni tulee näkyviin*/
     .navbar a.icon {
         float: right;
         display: block;
@@ -72,6 +76,7 @@ h1,h2, h3, h4{
 tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pienissä näytöissä*/
 @media screen and (max-width: 900px) {
     .navbar.responsive {position: relative;}
+    /*ikoni pysyy samassa paikassa oikealla ylhäällä*/
     .navbar.responsive a.icon {
         position: absolute;
         right: 0;
@@ -126,7 +131,7 @@ figcaption{
 #jateInfo{
     text-align: left;
     background-color: white;
-    margin: 0px 40px 0px 40px;
+    margin: 0 40px 0 40px;
     padding: 20px;
 }
 .jateInfo header{
@@ -142,12 +147,11 @@ figcaption{
     text-align: left;
 }
 #kierrataGrafiikka {
-    margin: 0 40px 20px 40px;
     max-width: 100%;
     height: auto;
 }
 .pisteet{
-    margin: 50px 40px;
+    margin: 50px 35px;
     border: solid #68B0AB;
 }
 button{
@@ -171,36 +175,27 @@ button:hover {
     border-radius: 2px;
 }
 #hakunappi{
-    background-color: white;
+    background-color: #F1DFD4;
     color: black;
-    border: 2px solid #E6C6B2;
     border-radius: 2px;
     transition-duration: 0.4s;
+    border-style: none;
 }
 #hakunappi:hover{
-    background-color: #E6C6B2;
+    background-color: #D29874;
     color: black;
     border-radius: 2px;
-}
-#hakunappi .active{
-    background-color: #E6C6B2;
-    color: black;
-    border-radius: 2px;
+    border-style: none;
 }
 #reset{
-    background-color: white;
+    background-color: #87bbb7;
     color: black;
-    border: 2px solid #D29874;
     border-radius: 2px;
     transition-duration: 0.4s;
+    border-style: none;
 }
 #reset:hover{
-    background-color: #D29874;
-    color: black;
-    border-radius: 2px;
-}
-#reset .active{
-    background-color: #D29874;
+    background-color: #68B0AB;
     color: black;
     border-radius: 2px;
 }

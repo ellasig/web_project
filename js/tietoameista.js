@@ -26,9 +26,8 @@ const ellaImg = document.getElementById('ellaKuva');
 const tuiskuImg = document.getElementById('tuiskuKuva');
 const sannaImg = document.getElementById('sannaKuva');
 
-//lisätään event listenerit
-
-//kun hiiri Ellan kuvan päällä tekstikenttään tulee teksti Ellasta
+//lisätään event listenerit ja kutsutaan samalla funktiota
+//kun hiiri on Ellan kuvan päällä, tekstikenttään tulee infoteksti Ellasta
 ellaImg.addEventListener("mouseenter", function (){
     console.log('enter');
     pElem.innerText = 'Hei! Olen Ella, tulin muutaman työvuoden jälkeen takaisin koulun penkille. Löysin intoni koodaamiseen vasta vuosi sitten ja intoni opiskeluun on vain kasvanut.';
@@ -39,12 +38,11 @@ ellaImg.addEventListener('mouseleave',function (){
    pElem.innerText=''
 });
 
-//jokaiselle omat samalla tyylillä
+//jokaiselle omat eventlistenerit ja funktiot samalla tyylillä
 tuiskuImg.addEventListener("mouseenter", function (){
     console.log('enter');
     pElem.innerText = 'Moikka! Olen Tuisku, nuori nainen helsingistä. Aloitin opiskelun metropoliassa muutaman välivuoden jälkeen.' +
-        ' Aloitin koodaamisen vasta kun aloitin koulussa joten olen nyt koodannut puolisen vuotta. Paljon on opittavaa siis. ' +
-        ' ' ;
+        ' Aloitin koodaamisen vasta puolisen vuotta sitten eli minulla on vielä paljon opittavaa. ';
 });
 tuiskuImg.addEventListener('mouseleave',function (){
     console.log('leave');

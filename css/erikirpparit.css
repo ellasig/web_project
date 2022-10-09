@@ -59,8 +59,6 @@ h1, h2, h3, h4{
 
 /* lisätään active classin omaavien tyylittelyä*/
 .navbar a.active {
-    background-color: #68B0AB;
-    color: black;
     padding: 0;
 }
 
@@ -76,7 +74,6 @@ h1, h2, h3, h4{
         display: block;
     }
 }
-
 /*responsive class lisätään elementille kun js suorittaa funktion käyttäjän painettua valikkoa.
 tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pienissä näytöissä*/
 @media screen and (max-width: 900px) {
@@ -144,6 +141,7 @@ footer img {
 figcaption {
     text-align: center;
 }
+
 footer {
     background-color: #E6C6B2;
     display: flex;
