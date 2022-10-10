@@ -114,10 +114,9 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 }
 video{
     float: left;
-    margin: 20px;
     width: 50%;
     position: relative;
-    margin-right: 40px;
+    margin: 20px 40px 20px 20px;
     z-index: 1;
 }
 ul{
