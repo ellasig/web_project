@@ -97,7 +97,7 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 
 .sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
-    margin: 50px 15px 15px 15px ;
+    margin: 50px 0 15px 0 ;
     overflow: auto;
     text-align: center;
 }
@@ -105,14 +105,14 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     background-color: #68B0AB;
     padding: 10px;
     border-radius: 5px;
-    margin: 50px 40px 60px 40px;
+    margin: 50px 50px 60px 50px;
 }
 figcaption{
     font-size: small;
 }
 .tietoaP{
     padding: 10px;
-    margin: 5px 15px 15px 20px;
+    margin: 5px 50px 15px 50px;
 }
 .tietoaKuvat{
     max-width: 100%;
@@ -122,6 +122,9 @@ figcaption{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 10px 10px 20px 10px;
+}
+#tietoaKuvia figure{
 }
 /*TÄSTÄ ALKAA FOOTTERIN TYYLITTELY*/
 .tekijoidenKuvat{
@@ -138,6 +141,17 @@ footer{
     align-items: center;
 }
 @media screen and (max-width: 900px) {
+    .tietoaKuvat{
+        margin: 10px;
+    }
+    #tietoaKuvia{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #tietoaKuvia figure{
+        margin: 10px;
+    }
     footer img {
         width: 200px;
     }
