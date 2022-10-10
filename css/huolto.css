@@ -119,7 +119,7 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     background-color: white;
     margin: 0 40px 0 40px;
 }
-#rikki section{
+#rikki div{
     display: flex;
     flex-direction: row;
 }
@@ -183,7 +183,7 @@ footer{
     }
 }
 @media screen and (max-width: 900px) {
-    #rikki section{
+    #rikki div{
         display: flex;
         flex-direction: column;
     }

@@ -97,7 +97,7 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 
 .sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
-    margin: 50px 0 15px 0 ;
+    margin: 50px 0 15px 0;
     overflow: auto;
     text-align: center;
 }
@@ -122,7 +122,8 @@ figcaption{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 10px 10px 20px 10px;
+    justify-content: space-evenly;
+    margin: 50px 10px 20px 50px;
 }
 #tietoaKuvia figure{
 }
@@ -140,11 +141,9 @@ footer{
     flex-direction: row;
     align-items: center;
 }
-@media screen and (max-width: 900px) {
-    .tietoaKuvat{
-        margin: 10px;
-    }
+@media screen and (max-width: 1200px) {
     #tietoaKuvia{
+        margin: 10px 50px 10px 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -152,6 +151,8 @@ footer{
     #tietoaKuvia figure{
         margin: 10px;
     }
+}
+@media screen and (max-width: 900px) {
     footer img {
         width: 200px;
     }
