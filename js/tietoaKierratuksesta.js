@@ -22,9 +22,9 @@ function navbarClass() {
 
 //apin dokumentaatiio ja ohjeet: https://assets.ctfassets.net/rmtbrkc0y0vp/1kkxUiiE7vrUm1FSfUYmOB/79e3ffb3724970bea230bc9d6bcb2519/kierratys.info_API_3.0_dokumentaatio.pdf
 //apin osoite ilman materiaalia
-const osoite = 'https://api.kierratys.info/collectionspots/?api_key=cd7ea34371fd693ea010c8146a53377c62b0e4cc&municipality=';
+const apiOsoite = 'https://api.kierratys.info/collectionspots/?api_key=cd7ea34371fd693ea010c8146a53377c62b0e4cc&municipality=';
 //osoite jossa mukana käyttäjän valitsema osio
-let apiOsoite;
+let osoite;
 //cors ongelmaan apuja proxy osoitteella
 const proxy = 'https://api.allorigins.win/get?url=';
 
@@ -82,11 +82,11 @@ function teeKysely() {
     //jos materiaaleja ei ole valittu tehdään haku ilman materiaalifiltteriä
     if(materiaalit.length === 0){
         //muodostetaan kyselyn osoite
-        apiOsoite = osoite + kaupunki;
+        osoite = apiOsoite + kaupunki;
         //consoliin kysely ilman materiaaleja
-        console.log("Kysely ilman materiaaleja: " + apiOsoite);
+        console.log("Kysely ilman materiaaleja: " + osoite);
         //tehdään lopullinen hakuosoite jossa mukana proxy osa
-        let proxyOsoite = proxy + encodeURIComponent(apiOsoite);
+        let proxyOsoite = proxy + encodeURIComponent(osoite);
         //kutsutaan teeHaku funktiota jonka parametrina on lopullinen hakuosoite
         teeHaku(proxyOsoite);
     }
@@ -95,11 +95,11 @@ function teeKysely() {
         //listataan materiaalit arraysta pilkku välissään
         materiaalit = materiaalit.join();
         //luodaan osoite materiaalifiltterin kanssa
-        apiOsoite = osoite + kaupunki + '&material=' + materiaalit;
+        osoite = apiOsoite + kaupunki + '&material=' + materiaalit;
         //consoliin osoite
-        console.log("Materiaalikysely: " + apiOsoite);
+        console.log("Materiaalikysely: " + osoite);
         //Luodaan lopullinen osoite proxyn ja apiosoitteen kanssa
-        let proxyOsoite = proxy + encodeURIComponent(apiOsoite);
+        let proxyOsoite = proxy + encodeURIComponent(osoite);
         //kutsutaan hakufunktiota, jonka parametrina on lopullinen hakusoite
         teeHaku(proxyOsoite);
     }

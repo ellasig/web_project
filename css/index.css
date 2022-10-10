@@ -92,8 +92,6 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
         text-align: left;
     }
 }
-#navBar{
-z-index: 3;}
 
 #myNavbar{
     z-index: 3;
@@ -137,7 +135,6 @@ ul{
 #slideKuva{
     width: 100%;
 }
-
 #sisalto{
     display: block;
 }
@@ -177,7 +174,6 @@ details{
         width: 90%;
         margin: 0;
     }
-
 }
 .tekijoidenKuvat{
     margin-bottom: 20px;
@@ -198,9 +194,18 @@ footer{
     padding: 20px;
     margin: 20px;
 }
-
-/*
-Lila: #725D68
-turkoosi: #68B0AB
-vaaleanpunainen: #F1DFD4*/
-
+@media screen and (max-width: 900px) {
+    footer img {
+        width: 50%;
+        margin: 10px 0 0 0;
+    }
+    figcaption {
+        text-align: center;
+    }
+    footer {
+        background-color: #E6C6B2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
