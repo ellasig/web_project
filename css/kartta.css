@@ -8,6 +8,9 @@ body{
 h1, h2, h3, h4{
     font-family: 'Barlow Condensed', sans-serif;
 }
+h3{
+    font-size: 22px;
+}
 /* NAVBARIN TYYLITTELY ALKAA*/
 /*annetaan taustaväri. Korekus maksimissaan 50px.
 Leveys koko näytön.*/
@@ -203,8 +206,7 @@ footer{
 }
 @media screen and (max-width: 900px) {
     footer img {
-        width: 50%;
-        margin: 10px 0 0 0;
+        width: 200px;
     }
     figcaption {
         text-align: center;
@@ -215,7 +217,4 @@ footer{
         flex-direction: column;
         align-items: center;
     }
-}
-h3{
-    font-size: 22px;
 }

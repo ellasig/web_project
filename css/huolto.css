@@ -12,6 +12,16 @@ h1, h2, h3, h4{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
+h2{
+    /* margin: 20px 0 20px 0;*/
+    /*padding: 20px;*/
+    text-align: center;
+    font-size: 30px;
+    /*background-color: #D29874; */
+}
+h3{
+    font-size: 22px;
+}
 /* NAVBARIN TYYLITTELY ALKAA*/
 /*annetaan taustaväri ja yli menevä on piilossa. Korekus maksimissaan 50px*/
 .navbar {
@@ -100,13 +110,6 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     /* margin: 20px 0 20px 0; */
     margin: 50px 40px 60px 40px;
 }
-h2{
-   /* margin: 20px 0 20px 0;*/
-    /*padding: 20px;*/
-    text-align: center;
-    font-size: 30px;
-    /*background-color: #D29874; */
-}
 #rikki{
     padding: 20px;
     background-color: #D29874;
@@ -180,8 +183,7 @@ footer{
 }
 @media screen and (max-width: 900px) {
     footer img {
-        width: 50%;
-        margin: 10px 0 0 0;
+        width: 200px;
     }
     figcaption {
         text-align: center;
@@ -192,7 +194,4 @@ footer{
         flex-direction: column;
         align-items: center;
     }
-}
-h3{
-    font-size: 22px;
 }

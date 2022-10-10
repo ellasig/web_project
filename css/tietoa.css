@@ -11,6 +11,12 @@ h1, h2, h3, h4{
     /* headerin fontti*/
     font-family: 'Barlow Condensed', sans-serif;
 }
+h3{
+    font-size: 22px;
+}
+h2 {
+    font-size: 30px;
+}
 /* NAVBARIN TYYLITTELY ALKAA*/
 /*annetaan taustaväri. Korekus maksimissaan 50px.
 Leveys koko näytön.*/
@@ -89,9 +95,6 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 }
 /*NAVBAR TYYLITTELY LOPPUU*/
 
-h2 {
-    font-size: 30px;
-}
 .sisalto{
     /*margin top: se määrä mitä header vie yläreunasta*/
     margin: 50px 15px 15px 15px ;
@@ -136,8 +139,7 @@ footer{
 }
 @media screen and (max-width: 900px) {
     footer img {
-        width: 50%;
-        margin: 10px 0 0 0;
+        width: 200px;
     }
     figcaption {
         text-align: center;
@@ -148,7 +150,4 @@ footer{
         flex-direction: column;
         align-items: center;
     }
-}
-h3{
-    font-size: 22px;
 }
