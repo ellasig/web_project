@@ -174,7 +174,6 @@ details{
         width: 90%;
         margin: 0;
     }
-
 }
 .tekijoidenKuvat{
     margin-bottom: 20px;
@@ -190,4 +189,19 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+@media screen and (max-width: 900px) {
+    footer img {
+        width: 50%;
+        margin: 10px 0 0 0;
+    }
+    figcaption {
+        text-align: center;
+    }
+    footer {
+        background-color: #E6C6B2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
