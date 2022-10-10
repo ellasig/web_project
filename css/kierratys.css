@@ -107,21 +107,20 @@ figcaption{
     font-size: small;
 }
 .kierratyskuvat{
-    width: 100%;
     padding: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin: 50px 30px 40px 30px;
+
 }
 .kierratyskuvat img{
     max-width: 100%;
     height: auto;
-    justify-content: space-evenly;
 }
 .kierratyskuvat figure{
-    /*margin: 10px;*/
-    margin: 50px 40px 30px 40px;
+    margin: 10px;
 }
 
 #kierratysInfo{
@@ -217,6 +216,18 @@ footer{
     align-items: center;
 }
 @media screen and (max-width: 900px) {
+    .kierratyskuvat{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .kierratyskuvat img{
+        width: 267px;
+        height: auto;
+    }
+    .kierratyskuvat figure{
+        margin: 10px;
+    }
     footer img {
         width: 200px;
     }
