@@ -174,12 +174,9 @@ main {
     line-height: 30px;
 }
 .tekijoidenKuvat{
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
-.tekijoidenKuvat{
     max-width: 70%;
     height: auto;
+    margin-top: 10px;
 }
 footer{
     background-color: #E6C6B2;
@@ -207,9 +204,6 @@ footer{
 @media screen and (max-width: 900px) {
     footer img {
         width: 200px;
-    }
-    figcaption {
-        text-align: center;
     }
     footer {
         background-color: #E6C6B2;

@@ -201,10 +201,10 @@ button:hover {
     color: black;
     border-radius: 2px;
 }
-/*TÄSTÄ ALKAA FOOTTERIN TYYLITTELY*/
 .tekijoidenKuvat{
     max-width: 70%;
     height: auto;
+    margin-top: 10px;
 }
 footer{
     width: 100%;
@@ -230,9 +230,6 @@ footer{
     }
     footer img {
         width: 200px;
-    }
-    figcaption {
-        text-align: center;
     }
     footer {
         background-color: #E6C6B2;

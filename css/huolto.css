@@ -91,11 +91,7 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 /*NAVBAR TYYLITTELY LOPPUU*/
 
 .sisalto {
-        /*margin top: se määrä mitä header vie yläreunasta*/
         margin-top: 50px;
-        overflow: auto;
-        display: flex;
-        flex-wrap: wrap;
 }
 #kayttoIka{
     background-color: #F1DFD4;
@@ -119,7 +115,7 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     background-color: white;
     margin: 0 40px 0 40px;
 }
-#rikki div{
+#rikkiDiv{
     display: flex;
     flex-direction: row;
 }
@@ -153,6 +149,9 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     max-width: 100%;
     height: auto;
 }
+#pesuohjeet{
+    max-width: 100%;
+}
 #pesuohjeCaption{
     margin: 10px 0 0 0;
     font-size: small;
@@ -163,6 +162,7 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
 .tekijoidenKuvat{
     max-width: 70%;
     height: auto;
+    margin-top: 10px;
 }
 footer{
     background-color: #E6C6B2;
@@ -196,9 +196,6 @@ footer{
     }
     footer img {
         width: 200px;
-    }
-    figcaption {
-        text-align: center;
     }
     footer {
         background-color: #E6C6B2;

@@ -129,18 +129,15 @@ tämä query avaa valikon alaspäin aukeavana jotta se näyttää hyvältä pien
     margin: 0;
     text-align: center;
 }
-
 figure {
     margin: 0;
     text-align: center;
 }
-
-footer img {
-    max-width: 50%;
+.tekijoidenKuvat{
+    max-width: 70%;
     height: auto;
     margin-top: 10px;
 }
-
 figcaption {
     text-align: center;
 }
@@ -154,9 +151,6 @@ footer {
 @media screen and (max-width: 900px) {
     footer img {
         width: 200px;
-    }
-    figcaption {
-        text-align: center;
     }
     footer {
         background-color: #E6C6B2;

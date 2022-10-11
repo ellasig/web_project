@@ -22,7 +22,7 @@ function navbarClass() {
 
 //apin dokumentaatiio ja ohjeet: https://assets.ctfassets.net/rmtbrkc0y0vp/1kkxUiiE7vrUm1FSfUYmOB/79e3ffb3724970bea230bc9d6bcb2519/kierratys.info_API_3.0_dokumentaatio.pdf
 //apin osoite ilman materiaalia
-const apiOsoite = 'https://api.kierratys.info/collectionspots/?api_key=cd7ea34371fd693ea010c8146a53377c62b0e4cc&municipality=';
+const apiOsoite = 'https://api.kierratys.info/collectionspots/?api_key=cd7ea34371fd693ea010c8146a53377c62b0e4cc';
 //osoite jossa mukana käyttäjän valitsema osio
 let osoite;
 //cors ongelmaan apuja proxy osoitteella
@@ -79,6 +79,11 @@ resetnappi.addEventListener('click', function (){
 function teeKysely() {
     // haetaan html-sivulta käyttäjän antama hakuteksti
     let kaupunki = document.getElementById('hakuteksti').value;
+    if (kaupunki === ''){
+        window.alert('Anna kaupunki!');
+        window.location.reload();
+    }
+    kaupunki = '&municipality=' + kaupunki;
     //jos materiaaleja ei ole valittu tehdään haku ilman materiaalifiltteriä
     if(materiaalit.length === 0){
         //muodostetaan kyselyn osoite
